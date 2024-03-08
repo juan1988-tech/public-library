@@ -1,0 +1,42 @@
+:root{
+    /*colors*/
+    --dark-gray-color: #888;
+    --medium-gray-color: #B7B7B7;
+    --medium-soft-gray-color:#c9c9c9;
+    --light-gray-color:#EAEAEA;
+    --light-gray-bg-color: #F3F2F2;
+    --dark-blue-tag: #20195E;
+    --dark-purple: #6E0B59;
+    --white-first-bg: #F5F9FC;
+    --font-principal-gray: #7A7A7A;
+    --blue-literature-club: #500EA3;
+    --orange-digital-journal: #EF5E00;
+    --brown-academical-advice: #871109;
+    --white-background: #FCFCFC;
+    --p-font-principal: #202021;
+    --blue-burguer-button: #0F0A3A;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: .625rem;
+    background: var(--light-gray-bg-color);
+    font-family: "Questrial", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: "Staatliches", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
