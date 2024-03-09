@@ -163,7 +163,7 @@ h6{
  overflow: auto;
  white-space: nowrap;
  width: 100vw;
- height: 22.2rem;
+ height: 28.2rem;
  position: absolute;
  left: 0;
  right: 0;
@@ -175,7 +175,7 @@ h6{
 display: inline-block;
 width: 100vw;
 scroll-snap-align: center;
-min-width: 32rem;
+min-width: 100vw;
 }
 
 
