@@ -40,3 +40,63 @@ h6{
     font-style: normal;
 }
 
+.header{
+    background-color: var(--dark-blue-tag);
+    height: 7.2rem;
+    padding: 0rem 3.2rem;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon-container{
+    height: 4.5rem;
+    width: 9rem;
+    display: block;    
+}
+
+.icon-container .icon-image{
+    width: 9rem;
+    height: 4.5rem;
+}
+
+.header .button-burguer{
+    height: 1.8rem;
+    width: 2.1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.header .button-burguer article{
+    width: 100%;
+    height: .3rem;
+    background-color: var(--light-gray-color);
+}
+
+.header .button-burguer article:first-child{
+    width: 100%;
+}
+
+.header .button-burguer .button-second-line{
+    width: 66%;
+    transition: transform .8s;
+} 
+
+.header .button-burguer .button-second-line-change{
+    transform: translateX(-.7rem);
+    transition: transform .8s;
+    width: 66%;
+}
+
+.header .button-burguer .button-third-line{
+    width: 33%;
+    transition: transform .8s; 
+}
+
+.header .button-burguer .button-third-line-change{
+    transform: translateX(-1.4rem);
+    transition: transform .8s;
+    width: 33%;
+}
