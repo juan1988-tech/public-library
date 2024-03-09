@@ -154,3 +154,33 @@ h6{
 .navbar-menu .navbar-menu-unordened-list li a{
     display: block;
 }
+
+/*estilos header*/
+
+.main-portrait{
+ display: flex;
+ flex-direction: row;
+ overflow: auto;
+ white-space: nowrap;
+ width: 100vw;
+ height: 22.2rem;
+ position: absolute;
+ left: 0;
+ right: 0;
+ overflow-y:hidden;
+ overflow-x:auto;
+}
+
+.main-portrait figure{
+display: inline-block;
+width: 100vw;
+scroll-snap-align: center;
+min-width: 32rem;
+}
+
+
+.main-portrait figure img{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}

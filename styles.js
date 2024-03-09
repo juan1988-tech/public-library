@@ -1,3 +1,5 @@
+// boton de hamburguesa
+
 const secondButtonBurguertLine = document.getElementById('button-second-line');
 const thirdButtonBurguerLine = document.getElementById('button-third-line');
 const buttonBurguer = document.getElementById('button-burguer');
@@ -10,3 +12,5 @@ function modifySecondLine(){
 }
 
 buttonBurguer.addEventListener('click',modifySecondLine);
+
+// carousel head
