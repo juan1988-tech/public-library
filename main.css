@@ -40,6 +40,10 @@ h6{
     font-style: normal;
 }
 
+p{
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+}
 
 .header{
     background-color: var(--dark-blue-tag);
@@ -162,8 +166,8 @@ h6{
  overflow: auto;
  white-space: nowrap;
  width: 100vw;
- height: 30.7rem;
- position: fixed;
+ height: 25.5rem;
+ position: absolute;
  left: 0;
  right: 0;
  overflow-y:hidden;
@@ -195,8 +199,9 @@ position: relative;
     height: 1rem;
     justify-content: space-between;
     margin: 0 auto;
-    margin-top: 27rem;
+    margin-top: 23.4rem;
     z-index: 1;
+    position: relative;
 }
 
 .white-button{
@@ -204,7 +209,7 @@ position: relative;
     width: 1rem;
     height: 100%;
     border-radius: 50%;
-    transition-duration: 1.5s;
+    transition-duration: 1.2s;
 }
 
 .blue-button{
@@ -213,8 +218,129 @@ position: relative;
     width: 1rem;
     height: 100%;
     border-radius: 50%;
-    transition-duration: 1.5s;
+    transition-duration: 1.2s;
     transform: scale(1.1);
 }
 
+/*estilos seción pantalla de bienvenida*/
 
+.introducing-part{
+    margin-top: 3.8rem;
+    padding-left: 3.2rem;
+    padding-right: 3.2rem;
+    margin-top: 2rem;
+}
+
+.introducing-part .introducing-part-title{
+    color: var(--dark-purple);
+    font-size: 2rem;
+    line-height: auto;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+.introducing-part .introducing-part-paragraph{
+    text-align: left;
+    font-size: 1.2rem;
+    margin-top: .7rem;
+}
+
+/*estilos seción catálogo*/
+
+.cathalog{
+    padding-left: 3.2rem;
+    padding-right: 3.2rem;
+    background-color: var(--light-gray-color);
+    height: 11rem;
+}
+
+.cathalog .cathalog-title{
+    color: var(--orange-digital-journal);
+    font-size: 2rem;
+    line-height: auto;
+    margin: 0 auto;
+    text-align: justify;
+    padding-top: .8rem;
+}
+
+.cathalog .cathalog-link{
+    display: block;
+    background-color: var(--dark-blue-tag);
+    color: var(--light-gray-bg-color);    
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    width: 18.7rem;
+    height: 3.2rem;
+    border-radius: .3rem;
+    margin: 0 auto;
+    margin-top: 1.6rem;
+}
+
+/*estilos talleres*/
+
+.workshops-information{
+    padding-left: 3.2rem;
+    padding-right: 3.2rem;
+}
+
+.workshops .workshops-title{
+    color: var(--brown-academical-advice);
+    font-size: 2rem;
+    line-height: auto;
+    margin: 0 auto;
+    text-align: justify;
+    padding-top: .8rem;
+}
+
+.workshops .workshops-little-paraghraph{
+    color: var(--dark-gray-color);
+    font-size: 1rem;
+}
+
+.workshops .workshop-slidebar{
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+    white-space: nowrap;
+    width: 100vw;
+    height: 22rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    overflow-y:hidden;
+    overflow-x:auto;
+    scroll-behavior:smooth;
+    margin-top: .7rem;
+}
+
+.workshop-slidebar figure{
+    display: inline-block;
+    width: 100vw;
+    scroll-snap-align: center;
+    min-width: 100vw;
+    position: relative;
+}
+
+.workshop-slidebar figure img{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.workshop-slidebar-container{
+    display: flex;
+    position: relative;
+}
+
+.workshop-slidebar-container .navigation-button{
+    display: flex;
+    width: 11.2rem;
+    height: 1rem;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 20.4rem;
+    z-index: 1;
+    position: relative;
+}

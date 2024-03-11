@@ -36,7 +36,7 @@
          </nav>
     </header>
     <section class="main-portrait-container">
-        <article class="main-portrait" onscroll="detectScrollMainPortrait()">
+        <article class="main-portrait" onscroll="detectScrollMainPortrait(mainPortrait)">
             <figure id="first-picture">
                 <img src="./images/header-1.jpg"/>    
             </figure>
@@ -56,6 +56,45 @@
             <div class="white-button" id=third-button onclick="PhotoScrollLeft(DetectPatternNumber*2,'blue-button','white-button','blue-button','white-button','white-button','blue-button','blue-button','white-button')"></div>
             <div class="white-button" id="fourth-button" onclick="PhotoScrollLeft(DetectPatternNumber*3,'blue-button','white-button','blue-button','white-button','blue-button','white-button','white-button','blue-button')"></div>
         </article>
+    </section>
+    <section class="introducing-part">
+        <h1 class="introducing-part-title">BIENVENIDO A LA BIBLIOTECA COMUNITARIA LA MONTAÑA MÁGICA</h1>
+        <p class="introducing-part-paragraph">Somos una Biblioteca Comunitaria, donde ofrecemos servicios de préstamo de libros, y actividades orientadas a la promoción de la cultura 
+            y el conocimiento</p>
+    </section>
+    <section class="cathalog">
+        <h1 class="cathalog-title">CONSULTA NUESTRO CATÁLOGO</h1>
+        <p class="cathalog-paragraph">Consulta, retira y pide libros en préstamo</p>
+        <a class="cathalog-link">Ir al catálogo</a>
+    </section>
+    <section class="workshops">
+        <article class="workshops-information">
+            <h1 class="workshops-title">CLUB DE LECTURA INFANTIL AREA 93</h1>
+            <p class="workshops-paragraph">Espacio para niños y niñas donde fomentamos la lectura y realizamos actividades artísticas y culturales</p>
+            <p class="workshops-little-paraghraph">Viernes 04:00 p.m. - 05:30 p.m.</p>
+        </article>
+        <section class="workshop-slidebar-container">
+            <article class="workshop-slidebar">
+                <figure id="first-picture">
+                    <img src="./images/area-1.jpg"/>    
+                </figure>
+                <figure>
+                    <img src="./images/area-2.jpg"/>
+                </figure>
+                <figure>
+                    <img src="./images/area-3.jpg"/>
+                </figure>
+                <figure>
+                    <img src="./images/area-4.jpg"/>
+                </figure>
+            </article>
+            <article class="navigation-button">
+                <div class="blue-button" id=""></div>
+                <div class="white-button" id="" ></div>
+                <div class="white-button" id=""></div>
+                <div class="white-button" id="" ></div>
+            </article>   
+        </section>
     </section>
     <script src="./styles.js"></script>
 </body>

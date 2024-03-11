@@ -54,20 +54,20 @@ const ButtonChange = (firstClassRemove,
     fourthButton.classList.add(fourthClassAdd);
 }
 
-function detectScrollMainPortrait(){
-    if(mainPortrait.scrollLeft < 30){ 
+function detectScrollMainPortrait(slide){
+    if(slide.scrollLeft < 30){ 
        ButtonChange('white-button','blue-button','blue-button','white-button','blue-button','white-button','blue-button','white-button');
     }
-    else if(mainPortrait.scrollLeft > DetectPatternNumber && mainPortrait.scrollLeft < DetectPatternNumber + 30){
+    else if(slide.scrollLeft > DetectPatternNumber && slide.scrollLeft < DetectPatternNumber + 30){
        ButtonChange('blue-button','white-button','white-button','blue-button','blue-button','white-button','blue-button','white-button');    
     }
-    else if(mainPortrait.scrollLeft > DetectPatternNumber*2 && mainPortrait.scrollLeft < [(DetectPatternNumber + 30)*2]){
+    else if(slide.scrollLeft > DetectPatternNumber*2 && slide.scrollLeft < [(DetectPatternNumber + 30)*2]){
         ButtonChange('blue-button','white-button','blue-button','white-button','white-button','blue-button','blue-button','white-button');
     }
-    else if(mainPortrait.scrollLeft === DetectPatternNumber*3){
+    else if(slide.scrollLeft === DetectPatternNumber*3){
         ButtonChange('blue-button','white-button','blue-button','white-button','blue-button','white-button','white-button','blue-button');
     }
-} 
+}
 
 const PhotoScrollLeft = (number,
     firstClassRemove,
