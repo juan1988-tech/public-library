@@ -35,19 +35,27 @@
             </ul> 
          </nav>
     </header>
-    <section class="main-portrait">
-        <figure>
-            <img src="./images/header-1.jpg"/>    
-        </figure>
-        <figure>
-            <img src="./images/header-2.jpg"/>
-        </figure>
-        <figure>
-            <img src="./images/header-3.jpg"/>
-        </figure>
-        <figure>
-            <img src="./images/area-4.jpg"/>
-        </figure>
+    <section class="main-portrait-container">
+        <article class="main-portrait" onscroll="detectScrollMainPortrait()">
+            <figure id="first-picture">
+                <img src="./images/header-1.jpg"/>    
+            </figure>
+            <figure>
+                <img src="./images/header-2.jpg"/>
+            </figure>
+            <figure>
+                <img src="./images/header-3.jpg"/>
+            </figure>
+            <figure>
+                <img src="./images/area-4.jpg"/>
+            </figure>
+        </article>
+        <article class="navigation-button">
+            <div class="blue-button" id="first-button"></div>
+            <div class="white-button" id="second-button"></div>
+            <div class="white-button" id=third-button></div>
+            <div class="white-button" id="fourth-button"></div>
+        </article>
     </section>
     <script src="./styles.js"></script>
 </body>
