@@ -168,9 +168,8 @@ h6{
  right: 0;
  overflow-y:hidden;
  overflow-x:auto;
+ scroll-behavior:smooth;
 }
-
-
 
 .main-portrait figure{
 display: inline-block;

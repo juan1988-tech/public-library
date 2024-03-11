@@ -27,61 +27,64 @@ const secondButton = document.querySelector('#second-button');
 const thirdButton = document.querySelector('#third-button');
 const fourthButton = document.querySelector('#fourth-button');
 
+ /*funciones de cambio de color de los botones de carrrusel*/ 
+
+const ButtonChange = (firstClassRemove,
+    firstClassAdd,
+    secondClassRemove,
+    secondClassAdd,
+    thirdClassRemove,
+    thirdClassAdd,
+    fourthClassRemove,
+    fourthClassAdd) =>{
+    //cambios de estilo al primer boton
+    firstButton.classList.remove(firstClassRemove);
+    firstButton.classList.add(firstClassAdd);
+
+    //cambios de estilo al segundo boton
+   secondButton.classList.remove(secondClassRemove);
+   secondButton.classList.add(secondClassAdd); 
+
+   //cambios de estilo al tercer boton
+    thirdButton.classList.remove(thirdClassRemove);
+    thirdButton.classList.add(thirdClassAdd);
+
+    //cambios de estilo al cuarto
+    fourthButton.classList.remove(fourthClassRemove);
+    fourthButton.classList.add(fourthClassAdd);
+}
+
 function detectScrollMainPortrait(){
-    if(mainPortrait.scrollLeft < 10){
-        firstButton.classList.remove('white-button');
-        firstButton.classList.add('blue-button');
-
-        secondButton.classList.remove('blue-button');
-        secondButton.classList.add('white-button');
-
-        thirdButton.classList.remove('blue-button');
-        thirdButton.classList.add('white-button');
-
-        fourthButton.classList.remove('blue-button');
-        fourthButton.classList.add('white-button');
+    if(mainPortrait.scrollLeft < 30){ 
+       ButtonChange('white-button','blue-button','blue-button','white-button','blue-button','white-button','blue-button','white-button');
     }
-    else if(mainPortrait.scrollLeft > DetectPatternNumber && mainPortrait.scrollLeft < DetectPatternNumber + 20){    
-        secondButton.classList.remove('white-button');
-        secondButton.classList.add('blue-button');
-
-        firstButton.classList.remove('blue-button');
-        firstButton.classList.add('white-button'); 
-        
-        thirdButton.classList.remove('blue-button');
-        thirdButton.classList.add('white-button');
+    else if(mainPortrait.scrollLeft > DetectPatternNumber && mainPortrait.scrollLeft < DetectPatternNumber + 30){
+       ButtonChange('blue-button','white-button','white-button','blue-button','blue-button','white-button','blue-button','white-button');    
     }
-    else if(mainPortrait.scrollLeft > DetectPatternNumber*2 && mainPortrait.scrollLeft < [(DetectPatternNumber + 20)*2]){
-        thirdButton.classList.remove('white-button');
-        thirdButton.classList.add('blue-button');
-
-        secondButton.classList.remove('blue-button');
-        secondButton.classList.add('white-button');
-        
-        fourthButton.classList.remove('blue-button');
-        fourthButton.classList.add('white-button');
+    else if(mainPortrait.scrollLeft > DetectPatternNumber*2 && mainPortrait.scrollLeft < [(DetectPatternNumber + 30)*2]){
+        ButtonChange('blue-button','white-button','blue-button','white-button','white-button','blue-button','blue-button','white-button');
     }
     else if(mainPortrait.scrollLeft === DetectPatternNumber*3){
-        fourthButton.classList.remove('white-button');
-        fourthButton.classList.add('blue-button');
-         
-        thirdButton.classList.remove('blue-button');
-        thirdButton.classList.add('white-button');
+        ButtonChange('blue-button','white-button','blue-button','white-button','blue-button','white-button','white-button','blue-button');
     }
 } 
 
-//funciones para manipular srollLeft con botones azules
-
-function secondPhotoScrollLeft(){
- mainPortrait.scrollBy({
-    left: DetectPatternNumber,
-    behavior: 'smooth'
- })
+const PhotoScrollLeft = (number,
+    firstClassRemove,
+    firstClassAdd,
+    secondClassRemove,
+    secondClassAdd,
+    thirdClassRemove,
+    thirdClassAdd,
+    fourthClassRemove,
+    fourthClassAdd) =>{
+    mainPortrait.scrollLeft = number;
+    ButtonChange(firstClassRemove,
+        firstClassAdd,
+        secondClassRemove,
+        secondClassAdd,
+        thirdClassRemove,
+        thirdClassAdd,
+        fourthClassRemove,
+        fourthClassAdd)
 }
-
-
-
-
-
-
-

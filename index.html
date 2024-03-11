@@ -51,10 +51,10 @@
             </figure>
         </article>
         <article class="navigation-button">
-            <div class="blue-button" id="first-button"></div>
-            <div class="white-button" id="second-button" onclick="secondPhotoScrollLeft()"></div>
-            <div class="white-button" id=third-button></div>
-            <div class="white-button" id="fourth-button"></div>
+            <div class="blue-button" id="first-button" onclick="PhotoScrollLeft(0,'white-button','blue-button','blue-button','white-button','blue-button','white-button','blue-button','white-button')"></div>
+            <div class="white-button" id="second-button" onclick="PhotoScrollLeft(DetectPatternNumber,'blue-button','white-button','white-button','blue-button','blue-button','white-button','blue-button','white-button')"></div>
+            <div class="white-button" id=third-button onclick="PhotoScrollLeft(DetectPatternNumber*2,'blue-button','white-button','blue-button','white-button','white-button','blue-button','blue-button','white-button')"></div>
+            <div class="white-button" id="fourth-button" onclick="PhotoScrollLeft(DetectPatternNumber*3,'blue-button','white-button','blue-button','white-button','blue-button','white-button','white-button','blue-button')"></div>
         </article>
     </section>
     <script src="./styles.js"></script>
