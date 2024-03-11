@@ -13,7 +13,7 @@ function modifySecondLine(){
 
 buttonBurguer.addEventListener('click',modifySecondLine);
 
-// carousel head y función para los botones
+// funciones para el carrusel de la etiqueta main-portrait
 
 const  mainPortrait = document.querySelector(".main-portrait");
 const stylesMainPortraitWidth = window.getComputedStyle(mainPortrait).width;
@@ -22,13 +22,12 @@ let DetectPattern = stylesMainPortraitWidth.match(numberPattern);
 let DetectPatternNumber = parseInt(DetectPattern[0]);
 console.log(DetectPatternNumber);
 
-function detectScrollMainPortrait(){
-    console.log('horizontal ' + mainPortrait.scrollLeft);
-    const firstButton = document.querySelector('#first-button');
-    const secondButton = document.querySelector('#second-button');
-    const thirdButton = document.querySelector('#third-button');
-    const fourthButton = document.querySelector('#fourth-button');
+const firstButton = document.querySelector('#first-button');
+const secondButton = document.querySelector('#second-button');
+const thirdButton = document.querySelector('#third-button');
+const fourthButton = document.querySelector('#fourth-button');
 
+function detectScrollMainPortrait(){
     if(mainPortrait.scrollLeft < 10){
         firstButton.classList.remove('white-button');
         firstButton.classList.add('blue-button');
@@ -71,7 +70,14 @@ function detectScrollMainPortrait(){
     }
 } 
 
+//funciones para manipular srollLeft con botones azules
 
+function secondPhotoScrollLeft(){
+ mainPortrait.scrollBy({
+    left: DetectPatternNumber,
+    behavior: 'smooth'
+ })
+}
 
 
 

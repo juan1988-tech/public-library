@@ -162,7 +162,7 @@ h6{
  overflow: auto;
  white-space: nowrap;
  width: 100vw;
- height: 31.7rem;
+ height: 30.7rem;
  position: fixed;
  left: 0;
  right: 0;
@@ -196,7 +196,7 @@ position: relative;
     height: 1rem;
     justify-content: space-between;
     margin: 0 auto;
-    margin-top: 28rem;
+    margin-top: 27rem;
     z-index: 1;
 }
 
@@ -208,13 +208,6 @@ position: relative;
     transition-duration: 1.5s;
 }
 
-.white-button:hover{
-    background-color: var(--blue-burguer-button);
-    border: 1px solid var(--light-gray-bg-color);
-    transition-duration: 1.5s;
-    transform: scale(1.1);
-}
-
 .blue-button{
     background-color: var(--blue-burguer-button);
     border: 1px solid var(--light-gray-bg-color);
@@ -224,3 +217,5 @@ position: relative;
     transition-duration: 1.5s;
     transform: scale(1.1);
 }
+
+
