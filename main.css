@@ -41,8 +41,8 @@ h6{
 }
 
 p{
-    font-size: 1.2rem;
-    line-height: 1.6rem;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
 }
 
 .header{
@@ -151,7 +151,7 @@ p{
 
 .navbar-menu .navbar-menu-unordened-list li{
     font-family: "Staatliches", sans-serif;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
 }
 
 .navbar-menu .navbar-menu-unordened-list li a{
@@ -233,7 +233,7 @@ position: relative;
 
 .introducing-part .introducing-part-title{
     color: var(--dark-purple);
-    font-size: 2rem;
+    font-size: 2.4rem;
     line-height: auto;
     margin: 0 auto;
     text-align: justify;
@@ -241,7 +241,7 @@ position: relative;
 
 .introducing-part .introducing-part-paragraph{
     text-align: left;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin-top: .7rem;
 }
 
@@ -251,12 +251,12 @@ position: relative;
     padding-left: 3.2rem;
     padding-right: 3.2rem;
     background-color: var(--light-gray-color);
-    height: 11rem;
+    height: 12rem;
 }
 
 .cathalog .cathalog-title{
     color: var(--orange-digital-journal);
-    font-size: 2rem;
+    font-size: 2.4rem;
     line-height: auto;
     margin: 0 auto;
     text-align: justify;
@@ -276,10 +276,12 @@ position: relative;
     border-radius: .3rem;
     margin: 0 auto;
     margin-top: 1.6rem;
+    font-size: 1.4rem;
 }
 
 /*estilos talleres*/
 
+/*estilos club de lectura*/
 .workshops-information{
     padding-left: 3.2rem;
     padding-right: 3.2rem;
@@ -287,7 +289,7 @@ position: relative;
 
 .workshops .workshops-title{
     color: var(--brown-academical-advice);
-    font-size: 2rem;
+    font-size: 2.4rem;
     line-height: auto;
     margin: 0 auto;
     text-align: justify;
@@ -296,7 +298,7 @@ position: relative;
 
 .workshops .workshops-little-paraghraph{
     color: var(--dark-gray-color);
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 .workshops .workshop-slidebar{
@@ -305,7 +307,7 @@ position: relative;
     overflow: auto;
     white-space: nowrap;
     width: 100vw;
-    height: 22rem;
+    height: 24rem;
     position: absolute;
     left: 0;
     right: 0;
@@ -340,7 +342,73 @@ position: relative;
     height: 1rem;
     justify-content: space-between;
     margin: 0 auto;
-    margin-top: 20.4rem;
+    margin-top: 21.4rem;
+    z-index: 1;
+    position: relative;
+}
+
+/*taller de Inglés*/
+.english-information{
+    padding-left: 3.2rem;
+    padding-right: 3.2rem;
+}
+
+.english-information .english-title{
+    color: var(--blue-literature-club);
+    font-size: 2.4rem;
+    line-height: auto;
+    margin: 0 auto;
+    text-align: justify;
+    padding-top: 2.8rem; 
+}
+
+.english-information .english-little-paragraph{
+    color: var(--dark-gray-color);
+    font-size: 1.2rem;
+}
+
+.workshops .english-slidebar{
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+    white-space: nowrap;
+    width: 100vw;
+    height: 27.5rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    overflow-y:hidden;
+    overflow-x:auto;
+    scroll-behavior:smooth;
+    margin-top: .7rem;
+}
+
+.english-slidebar figure{
+    display: inline-block;
+    width: 100vw;
+    scroll-snap-align: center;
+    min-width: 100vw;
+    position: relative;
+}
+
+.english-slidebar figure img{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.english-slidebar-container{
+    display: flex;
+    position: relative;
+}
+
+.english-slidebar-container .navigation-button{
+    display: flex;
+    width: 11.2rem;
+    height: 1rem;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 25.4rem;
     z-index: 1;
     position: relative;
 }

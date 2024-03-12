@@ -68,34 +68,68 @@
         <a class="cathalog-link">Ir al catálogo</a>
     </section>
     <section class="workshops">
-        <article class="workshops-information">
-            <h1 class="workshops-title">CLUB DE LECTURA INFANTIL AREA 93</h1>
-            <p class="workshops-paragraph">Espacio para niños y niñas donde fomentamos la lectura y realizamos actividades artísticas y culturales</p>
-            <p class="workshops-little-paraghraph">Viernes 04:00 p.m. - 05:30 p.m.</p>
-        </article>
-        <section class="workshop-slidebar-container" >
-            <article class="workshop-slidebar" onscroll="detectScrollMainPortrait(workshopSlidebar,firstButtonWorkshop,secondButtonWorkshop,thirdButtonWorkshop,fourthButtonWorkshop)">
-                <figure id="first-picture">
-                    <img src="./images/area-1.jpg"/>    
-                </figure>
-                <figure>
-                    <img src="./images/area-2.jpg"/>
-                </figure>
-                <figure>
-                    <img src="./images/area-3.jpg"/>
-                </figure>
-                <figure>
-                    <img src="./images/area-4.jpg"/>
-                </figure>
+        <!-- Clube de lectura -->
+        <section class="reading-club">
+            <article class="workshops-information">
+                <h1 class="workshops-title">CLUB DE LECTURA INFANTIL AREA 93</h1>
+                <p class="workshops-paragraph">Espacio para niños y niñas donde fomentamos la lectura y realizamos actividades artísticas y culturales</p>
+                <p class="workshops-little-paraghraph">Viernes 04:00 p.m. - 05:30 p.m.</p>
             </article>
-            <article class="navigation-button">
-                <div class="blue-button" id="first-button-workshop" onclick="PhotoScrollLeftWorkshop(0,'white-button','blue-button','blue-button','white-button','blue-button','white-button','blue-button','white-button',workshopSlidebar)"></div>
-                <div class="white-button" id="second-button-workshop" onclick="PhotoScrollLeftWorkshop(DetectPatternWorkshop,'blue-button','white-button','white-button','blue-button','blue-button','white-button','blue-button','white-button',workshopSlidebar)"></div>
-                <div class="white-button" id="third-button-workshop" onclick="PhotoScrollLeftWorkshop(DetectPatternWorkshop*2,'blue-button','white-button','blue-button','white-button','white-button','blue-button','blue-button','white-button',workshopSlidebar)"></div>
-                <div class="white-button" id="fourth-button-workshop" onclick="PhotoScrollLeftWorkshop(DetectPatternWorkshop*3,'blue-button','white-button','blue-button','white-button','blue-button','white-button','white-button','blue-button',workshopSlidebar)"></div>
-            </article>   
+            <section class="workshop-slidebar-container" >
+                <article class="workshop-slidebar" onscroll="detectScrollMainPortrait(workshopSlidebar,firstButtonWorkshop,secondButtonWorkshop,thirdButtonWorkshop,fourthButtonWorkshop)">
+                    <figure>
+                        <img src="./images/area-1.jpg"/>    
+                    </figure>
+                    <figure>
+                        <img src="./images/area-2.jpg"/>
+                    </figure>
+                    <figure>
+                        <img src="./images/area-3.jpg"/>
+                    </figure>
+                    <figure>
+                        <img src="./images/area-4.jpg"/>
+                    </figure>
+                </article>
+                <article class="navigation-button">
+                    <div class="blue-button" id="first-button-workshop" onclick="PhotoScrollLeftWorkshop(0,'white-button','blue-button','blue-button','white-button','blue-button','white-button','blue-button','white-button',workshopSlidebar)"></div>
+                    <div class="white-button" id="second-button-workshop" onclick="PhotoScrollLeftWorkshop(DetectPatternWorkshop,'blue-button','white-button','white-button','blue-button','blue-button','white-button','blue-button','white-button',workshopSlidebar)"></div>
+                    <div class="white-button" id="third-button-workshop" onclick="PhotoScrollLeftWorkshop(DetectPatternWorkshop*2,'blue-button','white-button','blue-button','white-button','white-button','blue-button','blue-button','white-button',workshopSlidebar)"></div>
+                    <div class="white-button" id="fourth-button-workshop" onclick="PhotoScrollLeftWorkshop(DetectPatternWorkshop*3,'blue-button','white-button','blue-button','white-button','blue-button','white-button','white-button','blue-button',workshopSlidebar)"></div>
+                </article>   
+            </section>
+        </section>
+        <!-- Taller de Inglés -->
+        <section class="english-workshop">
+            <article class="english-information">
+                <h1 class="english-title">TALLER DE INGLÉS</h1>
+                <p class="english-information-paragraph">Taller de formación en Inglés, donde aprendemos el idioma, contamos con club conversacional y seciones presenciales y virtuales</p>
+                <p class="english-little-paragraph">Sábados 10:00 a.m. - 11:00 a.m.</p>
+            </article>
+            <section class="english-slidebar-container">
+                <article class="english-slidebar" onscroll="detectScrollMainPortrait(englishSlidebar,firstButtonEnglish,secondButtonEnglish,thirdButtonEnglish,fourthButtonEnglish)">
+                    <figure>
+                        <img src="./images/ing-1.jpg"/>    
+                    </figure>
+                    <figure>
+                        <img src="./images/ing-2.jpg"/>
+                    </figure>
+                    <figure>
+                        <img src="./images/ing-3.jpg"/>
+                    </figure>
+                    <figure>
+                        <img src="./images/ing-4.jpg"/>
+                    </figure>
+                </article>
+                <article class="navigation-button">
+                    <div class="blue-button" id="first-button-english" onclick="PhotoScrollLeftEnglish(0,'white-button','blue-button','blue-button','white-button','blue-button','white-button','blue-button','white-button',englishSlidebar)"></div>
+                    <div class="white-button" id="second-button-english" onclick="PhotoScrollLeftEnglish(DetectPatternEnglish,'blue-button','white-button','white-button','blue-button','blue-button','white-button','blue-button','white-button',englishSlidebar)"></div>
+                    <div class="white-button" id="third-button-english" onclick="PhotoScrollLeftEnglish(DetectPatternEnglish*2,'blue-button','white-button','blue-button','white-button','white-button','blue-button','blue-button','white-button',englishSlidebar)"></div>
+                    <div class="white-button" id="fourth-button-english" onclick="PhotoScrollLeftEnglish(DetectPatternEnglish*3,'blue-button','white-button','blue-button','white-button','blue-button','white-button','white-button','blue-button',englishSlidebar)"></div>
+                </article>   
+            </section>
         </section>
     </section>
+
     <script src="./styles.js"></script>
 </body>
 </html>
