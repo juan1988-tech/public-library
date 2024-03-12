@@ -13,23 +13,42 @@ function modifySecondLine(){
 
 buttonBurguer.addEventListener('click',modifySecondLine);
 
-// funciones para el carrusel de la etiqueta main-portrait
+// funciones para el carrusel de la etiqueta main-portrait, y sección talleres
 
 const  mainPortrait = document.querySelector(".main-portrait");
 const stylesMainPortraitWidth = window.getComputedStyle(mainPortrait).width;
-let numberPattern = /\d+/;
-let DetectPattern = stylesMainPortraitWidth.match(numberPattern);
-let DetectPatternNumber = parseInt(DetectPattern[0]);
-console.log(DetectPatternNumber);
 
-const firstButton = document.querySelector('#first-button');
-const secondButton = document.querySelector('#second-button');
-const thirdButton = document.querySelector('#third-button');
-const fourthButton = document.querySelector('#fourth-button');
+const workshopSlidebar = document.querySelector(".workshop-slidebar");
+const workshopSlidebarWidth = window.getComputedStyle(workshopSlidebar).width;
+
+let numberPattern = /\d+/;
+
+let DetectPatternMainPortrait = stylesMainPortraitWidth.match(numberPattern);
+let DetectPatternNumberMainPortrait = parseInt(DetectPatternMainPortrait[0]);
+console.log(DetectPatternNumberMainPortrait);
+
+const firstButtonMain = document.querySelector('#first-button-main');
+const secondButtonMain = document.querySelector('#second-button-main');
+const thirdButtonMain = document.querySelector('#third-button-main');
+const fourthButtonMain = document.querySelector('#fourth-button-main');
+
+const firstButtonWorkshop = document.querySelector('#first-button-workshop');
+const secondButtonWorkshop = document.querySelector('#second-button-workshop');
+const thirdButtonWorkshop = document.querySelector('#third-button-workshop');
+const fourthButtonWorkshop = document.querySelector('#fourth-button-workshop');
+
+let DetectPatternWorkshop = workshopSlidebarWidth.match(numberPattern);
+let DetectPatternNumberWorkshop = parseInt(DetectPatternWorkshop[0]); 
+console.log(DetectPatternNumberWorkshop);
 
  /*funciones de cambio de color de los botones de carrrusel*/ 
 
-const ButtonChange = (firstClassRemove,
+const ButtonChange = (
+    firstButton,
+    secondButton,
+    thirdButton,
+    fourthButton,
+    firstClassRemove,
     firstClassAdd,
     secondClassRemove,
     secondClassAdd,
@@ -54,22 +73,23 @@ const ButtonChange = (firstClassRemove,
     fourthButton.classList.add(fourthClassAdd);
 }
 
-function detectScrollMainPortrait(slide){
+function detectScrollMainPortrait(slide,firstButton,secondButton,thirdButton,fourthButton){
     if(slide.scrollLeft < 30){ 
-       ButtonChange('white-button','blue-button','blue-button','white-button','blue-button','white-button','blue-button','white-button');
+       ButtonChange(firstButton,secondButton,thirdButton,fourthButton,'white-button','blue-button','blue-button','white-button','blue-button','white-button','blue-button','white-button');
     }
-    else if(slide.scrollLeft > DetectPatternNumber && slide.scrollLeft < DetectPatternNumber + 30){
-       ButtonChange('blue-button','white-button','white-button','blue-button','blue-button','white-button','blue-button','white-button');    
+    else if(slide.scrollLeft > DetectPatternNumberMainPortrait && slide.scrollLeft < DetectPatternNumberMainPortrait + 30){
+       ButtonChange(firstButton,secondButton,thirdButton,fourthButton,'blue-button','white-button','white-button','blue-button','blue-button','white-button','blue-button','white-button');    
     }
-    else if(slide.scrollLeft > DetectPatternNumber*2 && slide.scrollLeft < [(DetectPatternNumber + 30)*2]){
-        ButtonChange('blue-button','white-button','blue-button','white-button','white-button','blue-button','blue-button','white-button');
+    else if(slide.scrollLeft > DetectPatternNumberMainPortrait*2 && slide.scrollLeft < [(DetectPatternNumberMainPortrait + 30)*2]){
+        ButtonChange(firstButton,secondButton,thirdButton,fourthButton,'blue-button','white-button','blue-button','white-button','white-button','blue-button','blue-button','white-button');
     }
-    else if(slide.scrollLeft === DetectPatternNumber*3){
-        ButtonChange('blue-button','white-button','blue-button','white-button','blue-button','white-button','white-button','blue-button');
+    else if(slide.scrollLeft === DetectPatternNumberMainPortrait*3){
+        ButtonChange(firstButton,secondButton,thirdButton,fourthButton,'blue-button','white-button','blue-button','white-button','blue-button','white-button','white-button','blue-button');
     }
 }
 
-const PhotoScrollLeft = (number,
+const PhotoScrollLeftMain = (
+    number,
     firstClassRemove,
     firstClassAdd,
     secondClassRemove,
@@ -77,14 +97,48 @@ const PhotoScrollLeft = (number,
     thirdClassRemove,
     thirdClassAdd,
     fourthClassRemove,
-    fourthClassAdd) =>{
-    mainPortrait.scrollLeft = number;
-    ButtonChange(firstClassRemove,
-        firstClassAdd,
-        secondClassRemove,
-        secondClassAdd,
-        thirdClassRemove,
-        thirdClassAdd,
-        fourthClassRemove,
-        fourthClassAdd)
+    fourthClassAdd,
+    slide) =>{
+    slide.scrollLeft = number;
+    ButtonChange(
+    firstButtonMain,
+    secondButtonMain,
+    thirdButtonMain,
+    fourthButtonMain,    
+    firstClassRemove,
+    firstClassAdd,
+    secondClassRemove,
+    secondClassAdd,
+    thirdClassRemove,
+    thirdClassAdd,
+    fourthClassRemove,
+    fourthClassAdd)
 }
+
+const PhotoScrollLeftWorkshop = (
+    number,
+    firstClassRemove,
+    firstClassAdd,
+    secondClassRemove,
+    secondClassAdd,
+    thirdClassRemove,
+    thirdClassAdd,
+    fourthClassRemove,
+    fourthClassAdd,
+    slide) =>{
+    slide.scrollLeft = number;
+    ButtonChange(
+    firstButtonWorkshop,
+    secondButtonWorkshop,
+    thirdButtonWorkshop,
+    fourthButtonWorkshop,    
+    firstClassRemove,
+    firstClassAdd,
+    secondClassRemove,
+    secondClassAdd,
+    thirdClassRemove,
+    thirdClassAdd,
+    fourthClassRemove,
+    fourthClassAdd)
+}
+

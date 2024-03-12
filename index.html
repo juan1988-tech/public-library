@@ -36,7 +36,7 @@
          </nav>
     </header>
     <section class="main-portrait-container">
-        <article class="main-portrait" onscroll="detectScrollMainPortrait(mainPortrait)">
+        <article class="main-portrait" onscroll="detectScrollMainPortrait(mainPortrait,firstButtonMain,secondButtonMain,thirdButtonMain,fourthButtonMain)">
             <figure id="first-picture">
                 <img src="./images/header-1.jpg"/>    
             </figure>
@@ -51,10 +51,10 @@
             </figure>
         </article>
         <article class="navigation-button">
-            <div class="blue-button" id="first-button" onclick="PhotoScrollLeft(0,'white-button','blue-button','blue-button','white-button','blue-button','white-button','blue-button','white-button')"></div>
-            <div class="white-button" id="second-button" onclick="PhotoScrollLeft(DetectPatternNumber,'blue-button','white-button','white-button','blue-button','blue-button','white-button','blue-button','white-button')"></div>
-            <div class="white-button" id=third-button onclick="PhotoScrollLeft(DetectPatternNumber*2,'blue-button','white-button','blue-button','white-button','white-button','blue-button','blue-button','white-button')"></div>
-            <div class="white-button" id="fourth-button" onclick="PhotoScrollLeft(DetectPatternNumber*3,'blue-button','white-button','blue-button','white-button','blue-button','white-button','white-button','blue-button')"></div>
+            <div class="blue-button" id="first-button-main" onclick="PhotoScrollLeftMain(0,'white-button','blue-button','blue-button','white-button','blue-button','white-button','blue-button','white-button',mainPortrait)"></div>
+            <div class="white-button" id="second-button-main" onclick="PhotoScrollLeftMain(DetectPatternNumberMainPortrait,'blue-button','white-button','white-button','blue-button','blue-button','white-button','blue-button','white-button',mainPortrait)"></div>
+            <div class="white-button" id="third-button-main" onclick="PhotoScrollLeftMain(DetectPatternNumberMainPortrait*2,'blue-button','white-button','blue-button','white-button','white-button','blue-button','blue-button','white-button',mainPortrait)"></div>
+            <div class="white-button" id="fourth-button-main" onclick="PhotoScrollLeftMain(DetectPatternNumberMainPortrait*3,'blue-button','white-button','blue-button','white-button','blue-button','white-button','white-button','blue-button',mainPortrait)"></div>
         </article>
     </section>
     <section class="introducing-part">
@@ -73,8 +73,8 @@
             <p class="workshops-paragraph">Espacio para niños y niñas donde fomentamos la lectura y realizamos actividades artísticas y culturales</p>
             <p class="workshops-little-paraghraph">Viernes 04:00 p.m. - 05:30 p.m.</p>
         </article>
-        <section class="workshop-slidebar-container">
-            <article class="workshop-slidebar">
+        <section class="workshop-slidebar-container" >
+            <article class="workshop-slidebar" onscroll="detectScrollMainPortrait(workshopSlidebar,firstButtonWorkshop,secondButtonWorkshop,thirdButtonWorkshop,fourthButtonWorkshop)">
                 <figure id="first-picture">
                     <img src="./images/area-1.jpg"/>    
                 </figure>
@@ -89,10 +89,10 @@
                 </figure>
             </article>
             <article class="navigation-button">
-                <div class="blue-button" id=""></div>
-                <div class="white-button" id="" ></div>
-                <div class="white-button" id=""></div>
-                <div class="white-button" id="" ></div>
+                <div class="blue-button" id="first-button-workshop" onclick="PhotoScrollLeftWorkshop(0,'white-button','blue-button','blue-button','white-button','blue-button','white-button','blue-button','white-button',workshopSlidebar)"></div>
+                <div class="white-button" id="second-button-workshop" onclick="PhotoScrollLeftWorkshop(DetectPatternWorkshop,'blue-button','white-button','white-button','blue-button','blue-button','white-button','blue-button','white-button',workshopSlidebar)"></div>
+                <div class="white-button" id="third-button-workshop" onclick="PhotoScrollLeftWorkshop(DetectPatternWorkshop*2,'blue-button','white-button','blue-button','white-button','white-button','blue-button','blue-button','white-button',workshopSlidebar)"></div>
+                <div class="white-button" id="fourth-button-workshop" onclick="PhotoScrollLeftWorkshop(DetectPatternWorkshop*3,'blue-button','white-button','blue-button','white-button','blue-button','white-button','white-button','blue-button',workshopSlidebar)"></div>
             </article>   
         </section>
     </section>
