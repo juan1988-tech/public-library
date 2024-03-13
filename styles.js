@@ -183,3 +183,12 @@ const PhotoScrollLeftEnglish = (
     fourthClassRemove,
     fourthClassAdd)
 }
+
+//variables de formulario
+
+const formContainerButton = document.querySelector('.form-container-button');
+
+function stopEvent(e){
+    e.preventDefault()
+}
+

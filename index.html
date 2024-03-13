@@ -129,7 +129,36 @@
             </section>
         </section>
     </section>
-
+    <section class="form-container">
+        <h1>INSCRÍBETE EN NUESTRAS ACTIVIDADES</h1>
+        <p>Tenemos inscripciones abiertas para nuestras actividades, inscríbete para disfrutar de nuestras actividades y conocer nuestra biblioteca</p>
+        <form class="form" action="">
+            <label for="name">
+                <span>Nombre</span>
+                <input type="text" name="name-user" id="name-user"/>
+            </label for="cellphone-user">
+            <label>
+                <span>Celular</span>
+                <input type="text" name="cellphone-user" id="cellphone-user"/>
+            </label>
+            <label for="email-user">
+                <span>Correo Electrónico</span>
+                <input type="text" name="email-user" id="email-user"/>
+            </label>
+            <label for="birthday-user">
+                <span>Fecha de nacimiento</span>
+                <input type="date" name="trip-start" id="birthday-user" value="" min="1960-01-01" />
+            </label>
+            <label for="workshop-user">
+                <span>Quiero participar en</span>
+                <div class="input-radio-grid">
+                    <span>Club de Lectura area 93</span><input type="radio" name="workshop-user" value="club-de-lectura-area-93"/> 
+                    <span>Taller de Inglés</span><input type="radio" name="workshop-user" value="taller-de-Inglés"/>
+                </div>
+            </label>
+            <button type="submit" class="form-container-button" onclick="stopEvent(event)">Suscríbete</button>
+        </form> 
+    </section>    
     <script src="./styles.js"></script>
 </body>
 </html>
