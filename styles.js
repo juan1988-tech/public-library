@@ -98,7 +98,7 @@ function detectScrollMainPortrait(slide,firstButton,secondButton,thirdButton,fou
     else if(slide.scrollLeft > DetectPatternNumberMainPortrait*2 && slide.scrollLeft < [(DetectPatternNumberMainPortrait + 30)*2]){
         ButtonChange(firstButton,secondButton,thirdButton,fourthButton,'blue-button','white-button','blue-button','white-button','white-button','blue-button','blue-button','white-button');
     }
-    else if(slide.scrollLeft === DetectPatternNumberMainPortrait*3){
+    else if(slide.scrollLeft > DetectPatternNumberMainPortrait*2.5){
         ButtonChange(firstButton,secondButton,thirdButton,fourthButton,'blue-button','white-button','blue-button','white-button','blue-button','white-button','white-button','blue-button');
     }
 }
