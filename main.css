@@ -496,3 +496,71 @@ position: relative;
     padding: 1rem;
     border-radius: .3rem;
 }
+
+/*estilos del footer*/
+.footer{
+    padding: 1.6rem 3.2rem;
+    background-color: var(--blue-burguer-button);
+    color: var(--light-gray-color);
+    font-size: 1.6rem;
+}
+
+.footer a{
+    display: block;
+}
+
+.footer .footer-adress{
+    font-size: 1.6rem;
+}
+
+.footer .footer-libary-location{
+    color: var(--medium-gray-color);
+    font-size: 1.4rem;
+    margin-top: .6rem;
+}
+
+.footer .footer-links{
+    display: flex;
+    flex-direction: column;
+    height: 16.3rem;
+    justify-content: space-around;
+} 
+
+.footer-credits{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-credits .footer-credits-library-image{
+    display: block;
+    width: 12rem;
+    height: 6rem;
+    margin: 0 auto;
+    margin-top: 1.6rem;
+}
+
+.footer-credits .link-developer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 15rem;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+
+.link-developer p{
+    color: var(--medium-gray-color);
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.link-developer p+a{
+    color: var(--dark-gray-color);
+    text-align: center;
+    font-size: 1.4rem;
+    margin-top: .6rem;
+    text-decoration: none;
+}
+
+
+
