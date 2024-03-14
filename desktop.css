@@ -1,0 +1,104 @@
+.introducing-part .introducing-part-title,
+.cathalog .cathalog-title,
+.workshops .workshops-title,
+.english-information .english-title,
+.form-container h1{
+    font-size: 4rem;
+}
+
+.header{
+    height: 9rem;
+    padding: 0 6.4rem;
+}
+
+.navbar-menu-tablet li a:hover{
+    color: var(--light-blue);
+    transition-duration: 2s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.icon-container{
+    width: 12rem;
+    height: 6rem;
+}
+
+.icon-container .icon-image{
+    width: 100%;
+    height: 100%;
+}
+
+.main-container{
+    width: 80.4rem;
+    margin: 0 auto;
+}
+
+.introducing-part{
+    padding: 0;
+}
+
+.main-portrait{
+    width: 80.2rem;
+    height: 54.6rem;
+    left: calc( 50% - 40.1rem );
+}
+
+.main-portrait::-webkit-scrollbar,
+.workshops .workshop-slidebar::-webkit-scrollbar,
+.workshops .english-slidebar::-webkit-scrollbar{
+    height: 1rem;
+    background-color: transparent;
+    opacity: 30%;
+    border-radius: .5rem; 
+}
+
+.main-portrait::-webkit-scrollbar-thumb,
+.workshops .workshop-slidebar::-webkit-scrollbar-thumb,
+.workshops .english-slidebar::-webkit-scrollbar-thumb{
+    background-color: var(--medium-gray-color);
+    border-radius: .5rem;
+  }
+
+.main-portrait::-webkit-scrollbar-track,
+.workshops .workshop-slidebar::-webkit-scrollbar-track,
+.workshops .english-slidebar::-webkit-scrollbar-track{
+    background-color: var(--medium-soft-gray-color);
+}
+
+.main-portrait-container .navigation-button{
+    margin-top: 49.4rem;
+}
+
+.introducing-part .introducing-part-title{
+    margin-top: 5rem;
+}
+
+.introducing-part .introducing-part-paragraph{
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+}
+
+.cathalog{
+    padding: 0;
+    height: 15.8rem;
+}
+
+.cathalog .cathalog-title{
+    width: 80.4rem;
+}
+
+.cathalog .cathalog-paragraph{
+    width: 80.4rem;
+    margin: 0 auto;
+    font-size: 2.4rem;
+    margin-top: .8rem;
+}
+
+
+.form-container{
+    margin-top: 4rem;
+}
+
+
+.cathalog, .workshops-information{
+    padding: 0;
+}

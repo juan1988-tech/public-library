@@ -8,12 +8,13 @@
     <link rel="icon" href="./icons/logo-favicon.png" type="image/gif" sizes="16x16">
     <link href="https://fonts.googleapis.com/css2?family=Questrial&family=Staatliches&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./main.css"/>
-    <link rel="stylesheet" href="./tablet.css" media="( min-width: 768px)"/>
+    <link rel="stylesheet" href="./tablet.css" media="( min-width: 568px )" orientation="landscape"/>
+    <link rel="stylesheet" href="./desktop.css" media="( min-width: 1279px )"/>
     <title>Biblioteca Comunitaria la Montaña Mágica</title>
 </head>
 <body>
     <header class="header" href="#">
-        <a class="icon-container">
+        <a class="icon-container" href="#">
             <img class="icon-image" src="./images/log-la-montana-magica-h-w.png"/>
         </a>
         <section class="button-burguer" id="button-burguer">
@@ -47,6 +48,7 @@
             </li>
            </ul> 
     </header>
+    <main class="main-container">
     <section class="main-portrait-container">
         <article class="main-portrait" onscroll="detectScrollMainPortrait(mainPortrait,firstButtonMain,secondButtonMain,thirdButtonMain,fourthButtonMain,
         firstPictureWidthMain,secondPictureWidthMain,thirdPictureWidthMain,fourthPictureWidthMain)">
@@ -75,12 +77,14 @@
         <p class="introducing-part-paragraph">Somos una Biblioteca Comunitaria, donde ofrecemos servicios de préstamo de libros, y actividades orientadas a la promoción de la cultura 
             y el conocimiento</p>
     </section>
+    </main>
     <section class="cathalog">
         <h1 class="cathalog-title">CONSULTA NUESTRO CATÁLOGO</h1>
         <p class="cathalog-paragraph">Consulta, retira y pide libros en préstamo</p>
         <a class="cathalog-link">Ir al catálogo</a>
     </section>
     <section class="workshops">
+    <main class="main-container">
         <!-- Clube de lectura -->
         <section class="reading-club">
             <article class="workshops-information">
@@ -144,6 +148,7 @@
             </section>
         </section>
     </section>
+    </main>
     <section class="form-container">
         <h1>INSCRÍBETE EN NUESTRAS ACTIVIDADES</h1>
         <p>Tenemos inscripciones abiertas para nuestras actividades, inscríbete para disfrutar de nuestras actividades y conocer nuestra biblioteca</p>
