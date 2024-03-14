@@ -68,10 +68,6 @@ html{
     background-color: var(--medium-soft-gray-color);
 }
 
-.main-portrait-container .navigation-button{
-    margin-top: 49.4rem;
-}
-
 .introducing-part .introducing-part-title{
     margin-top: 5rem;
 }
@@ -111,9 +107,6 @@ html{
     left: calc( 50% - 40.1rem );
 }
 
-.workshop-slidebar-container .navigation-button{
-    margin-top: 51.4rem;
-}
 
 .workshop-slidebar figure:first-child{
     min-width: 98rem;
@@ -164,10 +157,6 @@ html{
 .form-container h1,.form-container p{
     width: 80.4rem;
     margin: 0 auto;
-}
-
-.form{
-    width: 36.5rem;
 }
 
 .form span{
