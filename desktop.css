@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 .introducing-part .introducing-part-title,
 .cathalog .cathalog-title,
 .workshops .workshops-title,
@@ -93,12 +97,104 @@
     margin-top: .8rem;
 }
 
-
-.form-container{
-    margin-top: 4rem;
-}
-
-
 .cathalog, .workshops-information{
     padding: 0;
 }
+
+.cathalog .cathalog-link{
+    width: 24.6rem;
+}
+
+.workshops .workshop-slidebar{
+    width: 80.2rem;
+    height: 54.6rem;
+    left: calc( 50% - 40.1rem );
+}
+
+.workshop-slidebar-container .navigation-button{
+    margin-top: 51.4rem;
+}
+
+.workshop-slidebar figure:first-child{
+    min-width: 98rem;
+}
+
+.workshop-slidebar figure:nth-child(2){
+    min-width: 54.6rem;
+}
+
+.workshop-slidebar figure:nth-child(3) {
+    min-width: 41rem;
+}
+
+.workshops-information .workshops-paragraph,
+.english-information .english-information-paragraph,
+.form-container p,.footer .footer-adress{
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+}
+
+.workshops .workshops-little-paraghraph,
+.english-information .english-little-paragraph{
+    font-size: 1.6rem;
+}
+
+.english-information{
+    padding: 0;
+}
+
+.english-information .english-title{
+    padding-top: 4rem;
+}
+
+.workshops .english-slidebar{
+    width: 80.2rem;
+    height: 54.6rem;
+    left: calc( 50% - 40.1rem );
+}
+
+.form-container{
+    margin-top: 5.4rem;
+}
+
+.form-container {
+    padding: 0;
+}
+
+.form-container h1,.form-container p{
+    width: 80.4rem;
+    margin: 0 auto;
+}
+
+.form{
+    width: 36.5rem;
+}
+
+.form span{
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+.form input[type="text"],.form input[type="date"]{
+    margin-top: 1rem;
+    height: 2.4rem;
+}
+
+.footer .footer-adress,
+.footer .footer-links,
+.link-developer p{
+    font-size: 2rem;
+    width: 21.4rem;
+}
+
+.footer .footer-libary-location,
+.footer-credits .link-developer{
+    width: 21.4rem;
+}
+
+.footer-credits .footer-credits-library-image{
+    width: 15rem;
+    height: 7.5rem;
+}
+
+
