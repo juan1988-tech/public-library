@@ -68,6 +68,10 @@ p{
     height: 4.5rem;
 }
 
+.navbar-menu-tablet{
+    display: none;
+}
+
 /*botón de hamburguesa*/
 
 .header .button-burguer{

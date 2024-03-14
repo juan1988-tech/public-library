@@ -1,0 +1,73 @@
+.introducing-part .introducing-part-title,
+.cathalog .cathalog-title,
+.workshops .workshops-title,
+.english-information .english-title,
+.form-container h1{
+    font-size: 3.2rem;
+}
+
+.header .button-burguer{
+    display: none;
+}
+
+.introducing-part .introducing-part-paragraph,p{
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+}
+
+.main-portrait,
+.workshops .workshop-slidebar,
+.workshops .english-slidebar{
+    width: 76.8rem;
+    height: 53.2rem;
+    left: calc(50% - 38.4rem);
+} 
+
+.workshops .workshop-slidebar{
+    height: 43.2rem;
+}
+
+
+.main-portrait-container .navigation-button{
+    margin-top: 50.4rem;
+} 
+ .workshop-slidebar-container .navigation-button {
+    margin-top: 41.4rem;
+}
+
+.introducing-part .introducing-part-title{
+    margin-top: 3rem;
+}
+
+.cathalog{
+    height: 13.8rem;
+}
+ 
+.workshop-slidebar figure:nth-child(2){
+    min-width:  43.2rem;
+    height: 100%;
+}
+
+.workshop-slidebar figure:nth-child(3){
+    min-width:  32.5rem;
+}
+
+.english-slidebar-container .navigation-button{
+    margin-top: 50.9rem;
+}
+
+/*estilos de la barrra de navegación para tablet y desktop*/
+
+.navbar-menu-tablet{
+    display: inline-flex;
+    font-size:2rem;
+    color: var(--light-gray-bg-color);
+    font-family:"Staatliches", sans-serif;
+    list-style: none;
+    width: 37.6rem;
+    justify-content: space-between;
+}
+
+.navbar-menu-tablet li a{
+    display: block;
+}

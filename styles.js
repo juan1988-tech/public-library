@@ -15,7 +15,6 @@ buttonBurguer.addEventListener('click',modifySecondLine);
 
 // funciones para el carrusel de la etiqueta main-portrait, y sección talleres e inglés
 
-let numberPattern = /\d+/;
 //main-portrait
 const  mainPortrait = document.querySelector(".main-portrait");
 const stylesMainPortraitWidth = window.getComputedStyle(mainPortrait).width;
@@ -25,9 +24,10 @@ const secondButtonMain = document.querySelector('#second-button-main');
 const thirdButtonMain = document.querySelector('#third-button-main');
 const fourthButtonMain = document.querySelector('#fourth-button-main');
 
-let DetectPatternMainPortrait = stylesMainPortraitWidth.match(numberPattern);
-let DetectPatternNumberMainPortrait = parseInt(DetectPatternMainPortrait[0]);
-console.log(DetectPatternNumberMainPortrait);
+const firstPictureWidthMain = document.querySelector('#first-picture-main').clientWidth;
+const secondPictureWidthMain = document.querySelector('#second-picture-main').clientWidth;
+const thirdPictureWidthMain = document.querySelector('#third-picture-main').clientWidth;
+const fourthPictureWidthMain = document.querySelector('#fourth-picture-main').clientWidth; 
 
 //workshop: club literario
 
@@ -39,11 +39,13 @@ const secondButtonWorkshop = document.querySelector('#second-button-workshop');
 const thirdButtonWorkshop = document.querySelector('#third-button-workshop');
 const fourthButtonWorkshop = document.querySelector('#fourth-button-workshop');
 
-let DetectPatternWorkshop = workshopSlidebarWidth.match(numberPattern);
-let DetectPatternNumberWorkshop = parseInt(DetectPatternWorkshop[0]); 
-console.log(DetectPatternNumberWorkshop);
+const firstPictureWidthWorkshop = document.querySelector('#first-picture-workshop').clientWidth;
+const secondPictureWidthWorkshop = document.querySelector('#second-picture-workshop').clientWidth;
+const thirdPictureWidthWorkshop = document.querySelector('#third-picture-workshop').clientWidth;
+const fourthPictureWidthWorkshop = document.querySelector('#fourth-picture-workshop').clientWidth;
 
 //workshop inglés
+
 const englishSlidebar = document.querySelector(".english-slidebar");
 const englishSlidebarWidth = window.getComputedStyle(englishSlidebar).width;
 
@@ -52,9 +54,10 @@ const secondButtonEnglish = document.querySelector('#second-button-english');
 const thirdButtonEnglish = document.querySelector('#third-button-english');
 const fourthButtonEnglish = document.querySelector('#fourth-button-english');
 
-let DetectPatternEnglish = workshopSlidebarWidth.match(numberPattern);
-let DetectPatternNumberEnglish = parseInt(DetectPatternEnglish[0]); 
-console.log(DetectPatternNumberEnglish);
+const firstPictureWidthEnglish = document.querySelector('#first-picture-english').clientWidth;
+const secondPictureWidthEnglish = document.querySelector('#second-picture-english').clientWidth;
+const thirdPictureWidthEnglish = document.querySelector('#third-picture-english').clientWidth;
+const fourthPictureWidthEnglish = document.querySelector('#fourth-picture-english').clientWidth;
 
  /*funciones de cambio de color de los botones de carrrusel*/ 
 
@@ -87,19 +90,26 @@ const ButtonChange = (
     fourthButton.classList.remove(fourthClassRemove);
     fourthButton.classList.add(fourthClassAdd);
 }
+
 /*funcion de scrollear slider*/
-function detectScrollMainPortrait(slide,firstButton,secondButton,thirdButton,fourthButton){
-    if(slide.scrollLeft < 30){ 
-       ButtonChange(firstButton,secondButton,thirdButton,fourthButton,'white-button','blue-button','blue-button','white-button','blue-button','white-button','blue-button','white-button');
+
+function detectScrollMainPortrait(slide,firstButton,secondButton,thirdButton,fourthButton,
+    firstPicture,secondPicture,thirdPicture,fourthPicture){
+    if(slide.scrollLeft > 0 && slide.scrollLeft < firstPicture){ 
+       ButtonChange(firstButton,secondButton,thirdButton,fourthButton,
+        'white-button','blue-button','blue-button','white-button','blue-button','white-button','blue-button','white-button');
     }
-    else if(slide.scrollLeft > DetectPatternNumberMainPortrait && slide.scrollLeft < DetectPatternNumberMainPortrait + 30){
-       ButtonChange(firstButton,secondButton,thirdButton,fourthButton,'blue-button','white-button','white-button','blue-button','blue-button','white-button','blue-button','white-button');    
+    else if(slide.scrollLeft > firstPicture && slide.scrollLeft < (firstPicture+secondPicture)){
+       ButtonChange(firstButton,secondButton,thirdButton,fourthButton,
+        'blue-button','white-button','white-button','blue-button','blue-button','white-button','blue-button','white-button');    
     }
-    else if(slide.scrollLeft > DetectPatternNumberMainPortrait*2 && slide.scrollLeft < [(DetectPatternNumberMainPortrait + 30)*2]){
-        ButtonChange(firstButton,secondButton,thirdButton,fourthButton,'blue-button','white-button','blue-button','white-button','white-button','blue-button','blue-button','white-button');
+    else if(slide.scrollLeft >(firstPicture+secondPicture) && slide.scrollLeft < (firstPicture+secondPicture+thirdPicture)){
+        ButtonChange(firstButton,secondButton,thirdButton,fourthButton,
+        'blue-button','white-button','blue-button','white-button','white-button','blue-button','blue-button','white-button');
     }
-    else if(slide.scrollLeft > DetectPatternNumberMainPortrait*2.5){
-        ButtonChange(firstButton,secondButton,thirdButton,fourthButton,'blue-button','white-button','blue-button','white-button','blue-button','white-button','white-button','blue-button');
+    else if(slide.scrollLeft >=(firstPicture+secondPicture+thirdPicture)){
+        ButtonChange(firstButton,secondButton,thirdButton,fourthButton,
+        'blue-button','white-button','blue-button','white-button','blue-button','white-button','white-button','blue-button');
     }
 }
 
