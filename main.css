@@ -227,6 +227,10 @@ position: relative;
     transform: scale(1.1);
 }
 
+.lateral-scroll{
+    display: none;
+}
+
 /*estilos seción pantalla de bienvenida*/
 
 .introducing-part{
@@ -611,9 +615,8 @@ position: relative;
     .form-container{
         padding: 0 7.2rem;
     }
-
+ 
     .form{
-        width: 70%;
         padding-right: 0;
         padding-left: 0;
         margin: 0 auto;
@@ -621,15 +624,15 @@ position: relative;
     .footer{
         padding-top: 1.6rem;
         padding-bottom: 1.6rem;
-        padding-right: 0;
-        padding-left: 0;
+        padding-right: 3.2rem;
+        padding-left: 3.2rem;
     }
-    .footer .footer-adress,
+    /* .footer .footer-adress,
     .footer .footer-libary-location,
     .footer .footer-links{
         width: 70%;
         margin: 0 auto;
-    }    
+    }     */
 }   
 
 

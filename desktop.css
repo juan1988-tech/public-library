@@ -185,16 +185,36 @@ html{
 .link-developer p{
     font-size: 2rem;
     width: 21.4rem;
+    margin: 0 auto;
 }
 
 .footer .footer-libary-location,
 .footer-credits .link-developer{
     width: 21.4rem;
+    margin: 0 auto;
 }
 
-.footer-credits .footer-credits-library-image{
+.footer-credits .wwwdfooter-credits-library-image{
     width: 15rem;
     height: 7.5rem;
+}
+
+/*estilos barras de scroll lateral*/
+
+.lateral-scroll{
+    display: flex;
+    width: 100%;
+    height: 4.8rem;
+    background-color: transparent;
+    position: absolute;
+    top: calc( 50% - 2.4rem );
+    justify-content: space-between;
+} 
+
+.lateral-scroll .lateral-left-scroll,
+.lateral-scroll .lateral-right-scroll{
+    width: 4.8rem;
+    height: 4.8rem;
 }
 
 
