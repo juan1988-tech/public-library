@@ -17,7 +17,6 @@ buttonBurguer.addEventListener('click',modifySecondLine);
 
 //main-portrait
 const  mainPortrait = document.querySelector(".main-portrait");
-const stylesMainPortraitWidth = window.getComputedStyle(mainPortrait).width;
 
 const firstButtonMain = document.querySelector('#first-button-main');
 const secondButtonMain = document.querySelector('#second-button-main');
@@ -32,7 +31,6 @@ const fourthPictureWidthMain = document.querySelector('#fourth-picture-main').cl
 //workshop: club literario
 
 const workshopSlidebar = document.querySelector(".workshop-slidebar");
-const workshopSlidebarWidth = window.getComputedStyle(workshopSlidebar).width;
 
 const firstButtonWorkshop = document.querySelector('#first-button-workshop');
 const secondButtonWorkshop = document.querySelector('#second-button-workshop');
@@ -47,7 +45,6 @@ const fourthPictureWidthWorkshop = document.querySelector('#fourth-picture-works
 //workshop inglés
 
 const englishSlidebar = document.querySelector(".english-slidebar");
-const englishSlidebarWidth = window.getComputedStyle(englishSlidebar).width;
 
 const firstButtonEnglish = document.querySelector('#first-button-english');
 const secondButtonEnglish = document.querySelector('#second-button-english');
@@ -91,7 +88,6 @@ const ButtonChange = (
     fourthButton.classList.add(fourthClassAdd);
 }
 
-/*funcion de scrollear slider*/
 
 function detectScrollMainPortrait(slide,firstButton,secondButton,thirdButton,fourthButton,
     firstPicture,secondPicture,thirdPicture,fourthPicture){
@@ -107,11 +103,13 @@ function detectScrollMainPortrait(slide,firstButton,secondButton,thirdButton,fou
         ButtonChange(firstButton,secondButton,thirdButton,fourthButton,
         'blue-button','white-button','blue-button','white-button','white-button','blue-button','blue-button','white-button');
     }
-    else if(slide.scrollLeft >=(firstPicture+secondPicture+thirdPicture)){
+    else if(slide.scrollLeft === firstPicture+secondPicture+thirdPicture){
         ButtonChange(firstButton,secondButton,thirdButton,fourthButton,
         'blue-button','white-button','blue-button','white-button','blue-button','white-button','white-button','blue-button');
     }
 }
+
+/*funcion de scrollear slider*/
 
 const PhotoScrollLeftMain = (
     number,
@@ -125,19 +123,46 @@ const PhotoScrollLeftMain = (
     fourthClassAdd,
     slide) =>{
     slide.scrollLeft = number;
-    ButtonChange(
-    firstButtonMain,
-    secondButtonMain,
-    thirdButtonMain,
-    fourthButtonMain,    
-    firstClassRemove,
-    firstClassAdd,
-    secondClassRemove,
-    secondClassAdd,
-    thirdClassRemove,
-    thirdClassAdd,
-    fourthClassRemove,
-    fourthClassAdd)
+    console.log(number);    
+    ButtonChange(firstButtonMain,secondButtonMain,thirdButtonMain,fourthButtonMain,    
+    firstClassRemove,firstClassAdd,secondClassRemove,secondClassAdd,thirdClassRemove,
+    thirdClassAdd,fourthClassRemove,fourthClassAdd)
+}
+
+function scrollVarRight(){ 
+    if(mainPortrait.scrollLeft === 0){
+        mainPortrait.scrollLeft += firstPictureWidthMain;
+        ButtonChange(firstButtonMain,secondButtonMain,thirdButtonMain,fourthButtonMain,
+        'blue-button','white-button','white-button','blue-button','blue-button','white-button','blue-button','white-button')
+    }
+    else if(mainPortrait.scrollLeft > 0){
+        mainPortrait.scrollLeft += secondPictureWidthMain;
+        ButtonChange(firstButtonMain,secondButtonMain,thirdButtonMain,fourthButtonMain,
+            'blue-button','white-button','blue-button','white-button','white-button','blue-button','blue-button','white-button')  
+    }
+    else if(mainPortrait.scrollLeft === firstPictureWidthMain+secondPictureWidthMain){
+        mainPortrait.scrollLeft += thirdPictureWidthMain;
+        ButtonChange(firstButtonMain,secondButtonMain,thirdButtonMain,fourthButtonMain,
+            'blue-button','white-button','blue-button','white-button','blue-button','white-button','white-button','blue-button')
+   }
+}
+
+function scrollVarLeft(){ 
+    if(mainPortrait.scrollLeft === 0){
+        mainPortrait.scrollLeft -= firstPictureWidthMain;
+        ButtonChange(firstButtonMain,secondButtonMain,thirdButtonMain,fourthButtonMain,
+        'blue-button','white-button','white-button','blue-button','blue-button','white-button','blue-button','white-button')
+    }
+    else if(mainPortrait.scrollLeft > 0){
+        mainPortrait.scrollLeft -= secondPictureWidthMain;
+        ButtonChange(firstButtonMain,secondButtonMain,thirdButtonMain,fourthButtonMain,
+            'blue-button','white-button','blue-button','white-button','white-button','blue-button','blue-button','white-button')  
+    }
+    else if(mainPortrait.scrollLeft === firstPictureWidthMain+secondPictureWidthMain){
+        mainPortrait.scrollLeft -= thirdPictureWidthMain;
+        ButtonChange(firstButtonMain,secondButtonMain,thirdButtonMain,fourthButtonMain,
+            'blue-button','white-button','blue-button','white-button','blue-button','white-button','white-button','blue-button')
+   }
 }
 
 const PhotoScrollLeftWorkshop = (
@@ -194,8 +219,6 @@ const PhotoScrollLeftEnglish = (
     fourthClassAdd)
 }
 
-
-
 //variables de formulario
 
 const formContainerButton = document.querySelector('.form-container-button');
@@ -204,3 +227,10 @@ function stopEvent(e){
     e.preventDefault()
 }
 
+/*funcion scrollear con barras laterales */
+
+
+
+
+
+       
