@@ -56,114 +56,117 @@ const secondPictureWidthEnglish = document.querySelector('#second-picture-englis
 const thirdPictureWidthEnglish = document.querySelector('#third-picture-english').clientWidth;
 const fourthPictureWidthEnglish = document.querySelector('#fourth-picture-english').clientWidth;
 
- /*funciones de cambio de color de los botones de carrrusel*/ 
+//funciones de botones
+function firstButtonSlide(slide,slideX,firstButton,secondButton){
+  slide.scrollTo(slideX,0)
+  firstButton.style.backgroundColor = "var(--blue-burguer-button)";
+  firstButton.style.transform = "scale(1.1)";
+  firstButton.style.border =   "1px solid var(--light-gray-bg-color)";
 
-const ButtonChange = (
-    firstButton,
-    secondButton,
-    thirdButton,
-    fourthButton,
-    firstClassRemove,
-    firstClassAdd,
-    secondClassRemove,
-    secondClassAdd,
-    thirdClassRemove,
-    thirdClassAdd,
-    fourthClassRemove,
-    fourthClassAdd) =>{
-    //cambios de estilo al primer boton
-    firstButton.classList.remove(firstClassRemove);
-    firstButton.classList.add(firstClassAdd);
-
-    //cambios de estilo al segundo boton
-   secondButton.classList.remove(secondClassRemove);
-   secondButton.classList.add(secondClassAdd); 
-
-   //cambios de estilo al tercer boton
-    thirdButton.classList.remove(thirdClassRemove);
-    thirdButton.classList.add(thirdClassAdd);
-
-    //cambios de estilo al cuarto
-    fourthButton.classList.remove(fourthClassRemove);
-    fourthButton.classList.add(fourthClassAdd);
+  secondButton.style.backgroundColor = "var(--light-gray-bg-color)"
 }
+
+function secondButtonSlide(slide,slideX,firstButton,secondButton,thirdButton){
+  slide.scrollTo(slideX,0)
+  secondButton.style.backgroundColor = "var(--blue-burguer-button)";
+  secondButton.style.transform = "scale(1.1)";
+  secondButton.style.border =   "1px solid var(--light-gray-bg-color)";
+
+  firstButton.style.backgroundColor = "var(--light-gray-bg-color)";
+}
+
+function thirdButtonSlide(slide,slideX,secondButton,thirdButton,fourthButton){
+    slide.scrollTo(slideX,0)
+    secondButton.classList.replace('blue-button','white-button')
+    thirdButton.classList.replace('white-button','blue-button') 
+    fourthButton.classList.replace('blue-button','white-button') 
+}
+
+function fourhtButtonSlide(slide,slideX,thirdButton,fourthButton){
+    slide.scrollTo(slideX,0)
+    thirdButton.classList.replace('blue-button','white-button') 
+    fourthButton.classList.replace('white-button','blue-button')
+}
+
+function scrollVarRight(){
+    if(mainPortrait.scrollLeft === 0 && mainPortrait.scrollLeft < firstPictureWidthMain){
+    mainPortrait.scrollTo(firstPictureWidthMain,0)
+    secondButtonMain.style.backgroundColor = "var(--blue-burguer-button)";
+    secondButtonMain.style.transform = "scale(1.1)";
+    secondButtonMain.style.border =   "1px solid var(--light-gray-bg-color)";
+    
+    firstButtonMain.style.backgroundColor = "var(--light-gray-bg-color)";  
+    }
+    else if(mainPortrait.scrollLeft === firstPictureWidthMain){
+    mainPortrait.scrollTo(firstPictureWidthMain+secondPictureWidthMain,0);    
+    thirdButtonMain.style.backgroundColor = "var(--blue-burguer-button)";
+    thirdButtonMain.style.transform = "scale(1.1)";
+    thirdButtonMain.style.border =   "1px solid var(--light-gray-bg-color)";
+    
+    secondButtonMain.style.backgroundColor = "var(--light-gray-bg-color)";
+    }
+    else if(mainPortrait.scrollLeft === firstPictureWidthMain+secondPictureWidthMain){
+    mainPortrait.scrollTo(firstPictureWidthMain+secondPictureWidthMain+thirdPictureWidthMain,0);
+    fourthButtonMain.style.backgroundColor = "var(--blue-burguer-button)";
+    fourthButtonMain.style.transform = "scale(1.1)";
+    fourthButtonMain.style.border =   "1px solid var(--light-gray-bg-color)";
+
+    thirdButtonMain.style.backgroundColor = "var(--light-gray-bg-color)";    
+    }
+}
+
+
+function scrollVarLeft(){
+    if(mainPortrait.scrollLeft === firstPictureWidthMain+secondPictureWidthMain+thirdPictureWidthMain){
+    mainPortrait.scrollTo(firstPictureWidthMain+secondPictureWidthMain,0);    
+    thirdButtonMain.style.backgroundColor = "var(--blue-burguer-button)";
+    thirdButtonMain.style.transform = "scale(1.1)";
+    thirdButtonMain.style.border =   "1px solid var(--light-gray-bg-color)";
+        
+    fourthButtonMain.style.backgroundColor = "var(--light-gray-bg-color)";   
+    }
+    else if(mainPortrait.scrollLeft === firstPictureWidthMain+secondPictureWidthMain){
+    mainPortrait.scrollTo(firstPictureWidthMain,0);    
+    secondButtonMain.style.backgroundColor = "var(--blue-burguer-button)";
+    secondButtonMain.style.transform = "scale(1.1)";
+    secondButtonMain.style.border =   "1px solid var(--light-gray-bg-color)";
+    
+    thirdButtonMain.style.backgroundColor = "var(--light-gray-bg-color)";
+    }
+    else if(mainPortrait.scrollLeft === firstPictureWidthMain){
+    mainPortrait.scrollTo(0,0);    
+    firstButtonMain.style.backgroundColor = "var(--blue-burguer-button)";
+    firstButtonMain.style.transform = "scale(1.1)";
+    firstButtonMain.style.border =   "1px solid var(--light-gray-bg-color)";
+        
+    secondButtonMain.style.backgroundColor = "var(--light-gray-bg-color)";
+    }
+}
+
 
 
 function detectScrollMainPortrait(slide,firstButton,secondButton,thirdButton,fourthButton,
-    firstPicture,secondPicture,thirdPicture,fourthPicture){
-    if(slide.scrollLeft > 0 && slide.scrollLeft < firstPicture){ 
-       ButtonChange(firstButton,secondButton,thirdButton,fourthButton,
-        'white-button','blue-button','blue-button','white-button','blue-button','white-button','blue-button','white-button');
+    firstPicture,secondPicture,thirdPicture){
+    if(slide.scrollLeft === 0 && slide.scrollLeft < firstPicture){ 
+     firstButton.classList.replace('white-button','blue-button')
+     secondButton.classList.replace('blue-button','white-button')
     }
     else if(slide.scrollLeft > firstPicture && slide.scrollLeft < (firstPicture+secondPicture)){
-       ButtonChange(firstButton,secondButton,thirdButton,fourthButton,
-        'blue-button','white-button','white-button','blue-button','blue-button','white-button','blue-button','white-button');    
+     firstButton.classList.replace('blue-button','white-button')   
+     secondButton.classList.replace('white-button','blue-button')
+     thirdButton.classList.replace('blue-button','white-button')     
     }
     else if(slide.scrollLeft >(firstPicture+secondPicture) && slide.scrollLeft < (firstPicture+secondPicture+thirdPicture)){
-        ButtonChange(firstButton,secondButton,thirdButton,fourthButton,
-        'blue-button','white-button','blue-button','white-button','white-button','blue-button','blue-button','white-button');
+     secondButton.classList.replace('blue-button','white-button')
+     thirdButton.classList.replace('white-button','blue-button') 
+     fourthButton.classList.replace('blue-button','white-button')   
     }
     else if(slide.scrollLeft === firstPicture+secondPicture+thirdPicture){
-        ButtonChange(firstButton,secondButton,thirdButton,fourthButton,
-        'blue-button','white-button','blue-button','white-button','blue-button','white-button','white-button','blue-button');
+    thirdButton.classList.replace('blue-button','white-button')
+    fourthButton.classList.replace('white-button','blue-button')
     }
 }
 
-/*funcion de scrollear slider*/
-
-const PhotoScrollLeftMain = (
-    number,
-    firstClassRemove,
-    firstClassAdd,
-    secondClassRemove,
-    secondClassAdd,
-    thirdClassRemove,
-    thirdClassAdd,
-    fourthClassRemove,
-    fourthClassAdd,
-    slide) =>{
-    slide.scrollLeft = number;
-    console.log(number);    
-    ButtonChange(firstButtonMain,secondButtonMain,thirdButtonMain,fourthButtonMain,    
-    firstClassRemove,firstClassAdd,secondClassRemove,secondClassAdd,thirdClassRemove,
-    thirdClassAdd,fourthClassRemove,fourthClassAdd)
-}
-
-function scrollVarRight(){ 
-    if(mainPortrait.scrollLeft === 0){
-        mainPortrait.scrollLeft += firstPictureWidthMain;
-        ButtonChange(firstButtonMain,secondButtonMain,thirdButtonMain,fourthButtonMain,
-        'blue-button','white-button','white-button','blue-button','blue-button','white-button','blue-button','white-button')
-    }
-    else if(mainPortrait.scrollLeft > 0){
-        mainPortrait.scrollLeft += secondPictureWidthMain;
-        ButtonChange(firstButtonMain,secondButtonMain,thirdButtonMain,fourthButtonMain,
-            'blue-button','white-button','blue-button','white-button','white-button','blue-button','blue-button','white-button')  
-    }
-    else if(mainPortrait.scrollLeft === firstPictureWidthMain+secondPictureWidthMain){
-        mainPortrait.scrollLeft += thirdPictureWidthMain;
-        ButtonChange(firstButtonMain,secondButtonMain,thirdButtonMain,fourthButtonMain,
-            'blue-button','white-button','blue-button','white-button','blue-button','white-button','white-button','blue-button')
-   }
-}
-
-function scrollVarLeft(){ 
-    if(mainPortrait.scrollLeft === 0){
-        mainPortrait.scrollLeft -= firstPictureWidthMain;
-        ButtonChange(firstButtonMain,secondButtonMain,thirdButtonMain,fourthButtonMain,
-        'blue-button','white-button','white-button','blue-button','blue-button','white-button','blue-button','white-button')
-    }
-    else if(mainPortrait.scrollLeft > 0){
-        mainPortrait.scrollLeft -= secondPictureWidthMain;
-        ButtonChange(firstButtonMain,secondButtonMain,thirdButtonMain,fourthButtonMain,
-            'blue-button','white-button','blue-button','white-button','white-button','blue-button','blue-button','white-button')  
-    }
-    else if(mainPortrait.scrollLeft === firstPictureWidthMain+secondPictureWidthMain){
-        mainPortrait.scrollLeft -= thirdPictureWidthMain;
-        ButtonChange(firstButtonMain,secondButtonMain,thirdButtonMain,fourthButtonMain,
-            'blue-button','white-button','blue-button','white-button','blue-button','white-button','white-button','blue-button')
-   }
-}
 
 const PhotoScrollLeftWorkshop = (
     number,
