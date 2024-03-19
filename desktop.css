@@ -68,10 +68,6 @@ html{
     background-color: var(--medium-soft-gray-color);
 }
 
-.introducing-part .introducing-part-title{
-    margin-top: 5rem;
-}
-
 .introducing-part .introducing-part-paragraph{
     font-size: 2.4rem;
     line-height: 3.2rem;
@@ -136,10 +132,6 @@ html{
     padding: 0;
 }
 
-.english-information .english-title{
-    padding-top: 4rem;
-}
-
 .workshops .english-slidebar{
     width: 80.2rem;
     height: 54.6rem;
@@ -147,7 +139,7 @@ html{
 }
 
 .form-container{
-    margin-top: 5.4rem;
+    margin-top: 1.8rem;
 }
 
 .form-container {

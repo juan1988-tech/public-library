@@ -235,10 +235,9 @@ position: relative;
 /*estilos seción pantalla de bienvenida*/
 
 .introducing-part{
-    margin-top: 3.8rem;
     padding-left: 3.2rem;
     padding-right: 3.2rem;
-    margin-top: 2rem;
+    margin-top: 1.2rem;
 }
 
 .introducing-part .introducing-part-title{
@@ -252,7 +251,6 @@ position: relative;
 .introducing-part .introducing-part-paragraph{
     text-align: left;
     font-size: 1.4rem;
-    margin-top: .7rem;
 }
 
 /*estilos seción catálogo*/
@@ -361,6 +359,11 @@ position: relative;
 }
 
 /*taller de Inglés*/
+.english-workshop{
+    margin-top: .7rem;
+}
+
+
 .english-information{
     padding-left: 3.2rem;
     padding-right: 3.2rem;
@@ -372,7 +375,6 @@ position: relative;
     line-height: auto;
     margin: 0 auto;
     text-align: justify;
-    padding-top: 2.8rem; 
 }
 
 .english-information .english-little-paragraph{
