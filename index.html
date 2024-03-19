@@ -50,8 +50,8 @@
     </header>
     <main class="main-container">
     <section class="main-portrait-container">
-        <article class="main-portrait" onscroll="detectScrollMainPortrait(mainPortrait,firstButtonMain,secondButtonMain,thirdButtonMain,fourthButtonMain,
-        firstPictureWidthMain,secondPictureWidthMain,thirdPictureWidthMain,fourthPictureWidthMain)">
+        <article class="main-portrait" onscroll="detectScrollMainPortrait(mainPortrait,firstButtonMain,secondButtonMain,
+        thirdButtonMain,fourthButtonMain,firstPictureWidthMain,secondPictureWidthMain,thirdPictureWidthMain,fourthPictureWidthMain)">
             <figure id="first-picture-main">
                 <img src="./images/header-1.jpg"/>    
             </figure>
@@ -73,10 +73,13 @@
         </article>
         <!-- botones laterales de scroll -->
         <article class="lateral-scroll">
-            <div class="lateral-left-scroll" id="lateral-left-scroll-main" onclick="scrollVarLeft()">
+            <div class="lateral-left-scroll" id="lateral-left-scroll-main" onclick="scrollVarLeft(mainPortrait,firstPictureWidthMain,
+            secondPictureWidthMain,thirdPictureWidthMain,firstButtonMain,secondButtonMain,thirdButtonMain,fourthButtonMain)">
                 <img  src="./icons/Expand_left.svg"/>
             </div>
-            <div class="lateral-right-scroll" id="lateral-right-scroll-main" onclick="scrollVarRight()">
+            <div class="lateral-right-scroll" id="lateral-right-scroll-main" 
+            onclick="scrollVarRight(mainPortrait,firstPictureWidthMain,secondPictureWidthMain,thirdPictureWidthMain,
+            firstButtonMain,secondButtonMain,thirdButtonMain,fourthButtonMain)">
                 <img src="./icons/Expand_right.svg"/>
             </div>
         </article>
@@ -122,7 +125,17 @@
                     <div class="white-button" id="second-button-workshop"></div>
                     <div class="white-button" id="third-button-workshop"></div>
                     <div class="white-button" id="fourth-button-workshop"></div>
-                </article>   
+                </article> 
+                <article class="lateral-scroll">
+                    <div class="lateral-left-scroll" id="lateral-left-scroll-main" onclick="scrollVarLeft(workshopSlidebar,firstPictureWidthWorkshop,
+                    secondPictureWidthWorkshop,thirdPictureWidthWorkshop,firstButtonWorkshop,secondButtonWorkshop,thirdButtonWorkshop,fourthButtonWorkshop)">
+                        <img  src="./icons/Expand_left.svg"/>
+                    </div>
+                    <div class="lateral-right-scroll" id="lateral-right-scroll-main" onclick="scrollVarRight(workshopSlidebar,firstPictureWidthWorkshop,
+                    secondPictureWidthWorkshop,thirdPictureWidthWorkshop,firstButtonWorkshop,secondButtonWorkshop,thirdButtonWorkshop,fourthButtonWorkshop)">
+                        <img src="./icons/Expand_right.svg"/>
+                    </div>
+                </article> 
             </section>
         </section>
         <!-- Taller de Inglés -->
@@ -153,7 +166,17 @@
                     <div class="white-button" id="second-button-english"></div>
                     <div class="white-button" id="third-button-english"></div>
                     <div class="white-button" id="fourth-button-english"></div>
-                </article>   
+                </article>
+                <article class="lateral-scroll">
+                    <div class="lateral-left-scroll" id="lateral-left-scroll-main" onclick="scrollVarLeft(englishSlidebar,firstPictureWidthEnglish,
+                    secondPictureWidthEnglish,thirdPictureWidthEnglish,firstButtonEnglish,secondButtonEnglish,thirdButtonEnglish,fourthButtonEnglish)">
+                        <img  src="./icons/Expand_left.svg"/>
+                    </div>
+                    <div class="lateral-right-scroll" id="lateral-right-scroll-main" onclick="scrollVarRight(englishSlidebar,firstPictureWidthEnglish,
+                    secondPictureWidthEnglish,thirdPictureWidthEnglish,firstButtonEnglish,secondButtonEnglish,thirdButtonEnglish,thirdButtonEnglish)">
+                        <img src="./icons/Expand_right.svg"/>
+                    </div>
+                </article>    
             </section>
         </section>
     </section>
