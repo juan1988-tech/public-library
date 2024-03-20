@@ -29,6 +29,7 @@ const thirdButtonMain = document.querySelector('#third-button-main');
 const fourthButtonMain = document.querySelector('#fourth-button-main');
 
 const firstPictureWidthMain = document.querySelector('#first-picture-main').clientWidth;
+console.log(firstPictureWidthMain);
 const secondPictureWidthMain = document.querySelector('#second-picture-main').clientWidth;
 const thirdPictureWidthMain = document.querySelector('#third-picture-main').clientWidth;
 const fourthPictureWidthMain = document.querySelector('#fourth-picture-main').clientWidth; 
