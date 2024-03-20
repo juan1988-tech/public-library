@@ -161,6 +161,8 @@ p{
 
 .navbar-menu .navbar-menu-unordened-list li a{
     display: block;
+    color: var(--light-gray-bg-color);
+    text-decoration: none;
 }
 
 /*estilos header*/
@@ -633,5 +635,168 @@ position: relative;
     }     */
 }   
 
+/*estilos libro*/
+.cathalog-main{
+    width: 90%;
+    margin: 0 auto;
+}
 
+.cathalog-main .cathalog-gray-line{
+    background-color: var(--medium-gray-color);
+    height: 1px;
+    margin-top: 1rem;
+    width: 100%;
 
+}
+
+.cathalog-main .cathalog-main-title{
+   margin-top: .8rem;
+   color: var(--dark-purple);
+   text-align: center;
+}
+
+.cathalog-main .cathalog-main-label{
+    border: none;
+    border-radius: .3rem;
+    height: 3.2rem;
+    filter:drop-shadow(0px 4px 4px rgba(0,0,0,0.25));
+    display: block;
+    position: relative;
+    margin-bottom: 1.4rem;
+}
+
+.cathalog-main .cathalog-main-searcher{
+    height: 100%;
+    width: 100%;
+    border: none;
+    background-color: var(--light-gray-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.cathalog-main .cathalog-main-submit{
+    width: 3.2rem;
+    height: 100%;
+    border-radius: .3rem;
+    border: none;
+    background-color: var(--dark-blue-tag);
+    top: 0;
+    right: 0;
+    position: absolute;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cathalog-main .cathalog-main-book{
+    height: 24.3rem;
+}
+
+.cathalog-main .cathalog-main-grid{
+    display: grid;
+    grid-template: auto / 2rem 8.5rem auto;
+    grid-template-areas:"cathalog-main-id cathalog-book-title cathalog-book-title"
+                        "genre genre genre-description"
+                        "author author author-description"
+                        "year year year-description"
+                        "editorial editorial editorial-description"
+                        "book-type book-type book-type-description"
+                        "cathalog-state cathalog-state cathalog-state";
+    height: 24.3rem; 
+    border-bottom: 1px solid var(--medium-gray-color);
+    border-top: 1px solid var(--medium-gray-color);                   
+}
+
+.cathalog-main .cathalog-main-submit img{
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+.cathalog-main .cathalog-main-id{
+    background-color: var(--blue-burguer-button);
+    color: var(--light-gray-bg-color);
+    font-family: "Staatliches", sans-serif;
+    font-size: 1.2rem;
+    height: 2rem;
+    width: 2rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: cathalog-main-id;
+}
+
+.cathalog-main .cathalog-book-title{
+    margin-left: 1rem;
+    color: var(--blue-burguer-button);
+    font-size: 1.6rem;
+    grid-area: cathalog-book-title;
+}
+
+.cathalog-main .genre{
+    grid-area: genre;
+    color: var(--blue-burguer-button);
+}
+
+.cathalog-main .genre-description{
+    grid-area: genre-description;
+    color: var(--p-font-principal);
+}
+
+.cathalog-main .author{
+    grid-area: author;
+    color: var(--blue-burguer-button);
+}
+
+.cathalog-main .author-description{
+    grid-area: author-description;
+    color: var(--p-font-principal);
+}
+
+.cathalog-main .year{
+    grid-area: year;
+    color: var(--blue-burguer-button);
+}
+
+.cathalog-main .year-description{
+    grid-area: year-description;
+    color: var(--p-font-principal);
+}
+
+.cathalog-main .editorial{
+    grid-area: editorial;
+    color: var(--blue-burguer-button);
+}
+
+.cathalog-main .editorial-description{
+    grid-area: editorial-description;
+    color: var(--p-font-principal);
+}
+
+.cathalog-main .book-type{
+    grid-area: book-type;
+    color: var(--blue-burguer-button);
+}
+
+.cathalog-main .book-type-description{
+    grid-area: book-type-description;
+    color: var(--p-font-principal);
+}
+
+.cathalog-main .cathalog-state{
+    grid-area: cathalog-state;
+    display: inline-flex;
+    align-self: center;
+    justify-self: center;
+    font-size: 1.4rem;
+    width: 20.6rem;
+    justify-content: space-between;
+}
+
+.cathalog-state .cathalog-available{
+    color: var(--medium-gray-color);
+}
+
+.cathalog-state .cathalog-loaned{
+    color: var(--orange-digital-journal);
+}

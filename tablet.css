@@ -55,6 +55,8 @@
 
 .navbar-menu-tablet li a{
     display: block;
+    color: var(--light-gray-bg-color);
+    text-decoration: none;
 }
 
 

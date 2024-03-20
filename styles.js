@@ -1,17 +1,22 @@
 // boton de hamburguesa
 
-const secondButtonBurguertLine = document.getElementById('button-second-line');
-const thirdButtonBurguerLine = document.getElementById('button-third-line');
-const buttonBurguer = document.getElementById('button-burguer');
-const navbarMenu = document.querySelector('#navbar-menu');
+//botones de hamburguesa para el index.html
+const secondButtonLineIndex = document.getElementById('button-second-line');
+const thirdButtonLineIndex = document.getElementById('button-third-line');
+const buttonBurguerIndex = document.getElementById('button-burguer');
+const navbarMenuIndex = document.querySelector('#navbar-menu');
 
-function modifySecondLine(){
-    secondButtonBurguertLine.classList.toggle('button-second-line-change');
-    thirdButtonBurguerLine.classList.toggle('button-third-line-change');
+//botones de hamburguesa para el cathalog.html
+const secondButtonLineCathalog = document.getElementById('button-second-line-cat');
+const thirdButtonLineCathalog = document.getElementById('button-third-line-cat');
+const buttonBurguerCathalog = document.getElementById('button-burguer-cat');
+const navbarMenuCathalog = document.querySelector('#navbar-menu-cat');
+
+function modifySecondLine(secondButtonLine,thirdButtonLine,navbarMenu){
+    secondButtonLine.classList.toggle('button-second-line-change');
+    thirdButtonLine.classList.toggle('button-third-line-change');
     navbarMenu.classList.toggle('navbar-menu-movement');
 }
-
-buttonBurguer.addEventListener('click',modifySecondLine);
 
 // funciones para el carrusel de la etiqueta main-portrait, y sección talleres e inglés
 

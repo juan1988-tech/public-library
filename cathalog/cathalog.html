@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="../icons/logo-favicon.png" type="image/gif" sizes="16x16">
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../main.css"/>
+    <link rel="stylesheet" href="../tablet.css" media=" ( min-width: 768px ) "/>
+    <link rel="stylesheet" href ="../desktop.css" media="( min-width: 1279px )"/>
+    <title>Biblioteca Comunitaria: Catálogo</title>
+</head>
+<body>
+    <header class="header" href="#">
+        <a class="icon-container" href="../index.html">
+            <img class="icon-image" src="../images/log-la-montana-magica-h-w.png"/>
+        </a>
+        <section class="button-burguer" id="button-burguer" onclick="modifySecondLine(secondButtonLineCathalog,thirdButtonLineCathalog,navbarMenuCathalog)">
+            <article></article>
+            <article id="button-second-line-cat" class="button-second-line"></article>
+            <article id="button-third-line-cat" class="button-third-line"></article>
+        </section>
+        <nav class="navbar-menu" id="navbar-menu-cat">
+            <img class="navbar-menu-logo" src="../images/log-la-montana-magica-h-w.png"/>
+            <ul class="navbar-menu-unordened-list">
+             <li>
+                 <a href="#">CATÁLOGO</a>
+                 <!-- <a href="https://juan1988-tech.github.io/public-library/cathalog">CATÁLOGO</a> -->
+             </li>
+             <li>
+                 <a>INGRESA</a>
+             </li>
+             <li>
+                 <a>REGÍSTRATE</a>
+             </li>
+            </ul> 
+         </nav>
+         <ul class="navbar-menu-tablet">
+            <li>
+                <a href="../index.html">CATÁLOGO</a>
+            </li>
+            <li>
+                <a>INGRESA</a>
+            </li>
+            <li>
+                <a>REGÍSTRATE</a>
+            </li>
+           </ul> 
+    </header>    
+    <main class="cathalog-main">
+        <h1 class="cathalog-main-title">CATÁLOGO DE LIBROS</h1>
+        <label class="cathalog-main-label">
+            <input type="search" class="cathalog-main-searcher"/>
+            <button type="submit" class="cathalog-main-submit"><img src="../icons/loop-icon.svg" /></button>
+        </label>
+        <section class="cathalog-main-book">
+            <section class="cathalog-main-grid">
+                <article class="cathalog-main-id">
+                    <h1>1</h1> 
+                </article>
+                <h1 class="cathalog-book-title">CAÍDA LIBRE</h1>
+                <p class="cathalog-main-blue genre">Género: </p>
+                <p class="cathalog-main-p genre-description">Economía</p>
+                <p class="cathalog-main-blue author">Autor: </p>
+                <p class="cathalog-main-p author-description">Joseph Stiglitz</p>
+                <p class="cathalog-main-blue year">Año:</p>
+                <p class="cathalog-main-p year-description">2008</p>
+                <p class="cathalog-main-blue editorial">Editorial: </p>
+                <p class="cathalog-main-p editorial-description">Santillana Ediciones Generales</p>
+                <p class="cathalog-main-blue book-type">Tipo de libro: </p>
+                <p class="cathalog-main-p book-type-description">Libro de tapa dura</p>
+                <article class="cathalog-state">
+                    <p class="cathalog-available">Disponible</p>
+                    <p class="cathalog-loaned">En préstamo</p>
+                </article>
+            </section>
+        </section>
+    </main>
+    <script src="../styles.js"></script>
+    <script src="../books.js"></script>
+</body>
+</html>
