@@ -693,6 +693,7 @@ position: relative;
     height: 24.3rem;
 }
 
+
 .cathalog-main .cathalog-main-grid{
     display: grid;
     grid-template: auto / 2rem 8.5rem auto;
@@ -705,7 +706,6 @@ position: relative;
                         "cathalog-state cathalog-state cathalog-state";
     height: 24.3rem; 
     border-bottom: 1px solid var(--medium-gray-color);
-    border-top: 1px solid var(--medium-gray-color);                   
 }
 
 .cathalog-main .cathalog-main-submit img{

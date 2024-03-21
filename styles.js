@@ -148,8 +148,6 @@ function stopEvent(e){
     e.preventDefault()
 }
 
-/*funcion scrollear con barras laterales */
-
 
 
 
