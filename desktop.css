@@ -199,3 +199,40 @@ html{
 }
 
 
+/*estilos catalogo para desktop*/
+
+.cathalog-main{
+    width: 90%;
+}
+
+.cathalog-main .cathalog-main-label{
+    width: 56.6rem;
+    margin: 0 auto;
+}
+
+.cathalog-main .cathalog-main-book {
+    height: 30rem;
+}
+
+.cathalog-main .cathalog-main-grid {
+    display: grid;
+     grid-template: auto / 2.4rem 13.5rem auto;
+    grid-template-areas:
+        "cathalog-main-id cathalog-book-title cathalog-book-title"
+        "genre genre genre-description"
+        "author author author-description"
+        "year year year-description"
+        "editorial editorial editorial-description"
+        "book-type book-type book-type-description"
+        "cathalog-state cathalog-state cathalog-state";
+    height: 100%;
+    border-bottom: 1px solid var(--medium-gray-color);
+}
+
+.cathalog-main .cathalog-main-grid p{
+    font-size: 2rem;
+}
+
+.cathalog-main .cathalog-state{
+    width: 24rem;
+}

@@ -66,4 +66,28 @@
 }
 
 
-/*lateral scroll estilos*/
+/*estilos para la sección de catalogo*/
+
+.cathalog-main{
+    width: 37rem;
+}
+
+.cathalog-main .cathalog-main-title{
+    font-size: 3.2rem;
+}
+
+
+.cathalog-main .cathalog-book-title{
+    font-size: 2.4rem;
+}
+
+.cathalog-main .cathalog-main-id{
+    width: 2.4rem;
+    height: 2.4rem;
+    font-size: 1.6rem;
+}
+
+.cathalog-main .cathalog-main-grid{
+    align-items: center;
+}
+ 
