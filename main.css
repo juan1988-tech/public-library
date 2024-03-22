@@ -287,6 +287,7 @@ position: relative;
     margin: 0 auto;
     margin-top: 1.6rem;
     font-size: 1.4rem;
+    text-decoration: none;
 }
 
 /*estilos talleres*/
@@ -698,8 +699,8 @@ position: relative;
     display: grid;
     grid-template: auto / 2rem 8.5rem auto;
     grid-template-areas:"cathalog-main-id cathalog-book-title cathalog-book-title"
-                        "genre genre genre-description"
                         "author author author-description"
+                        "genre genre genre-description"
                         "year year year-description"
                         "editorial editorial editorial-description"
                         "book-type book-type book-type-description"

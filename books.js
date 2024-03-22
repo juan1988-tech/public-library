@@ -165,8 +165,26 @@ class MainBook{
     }
 }
   
-const firstBook = new MainBook(1,'Caída Libre','Economía','Joseph Stiglitz',2008,'Santillana Ediciones Generales','Libro de tapa dura',true);
-firstBook.createNodes;
 
-const secondBook = new MainBook(2,'Caída Libre','Economía','Joseph Stiglitz',2008,'Santillana Ediciones Generales','Libro de tapa dura',true);
-secondBook.createNodes;
+// array con todos los obejtos de las clases de los libros
+const bookListData = [
+new MainBook(1,'Caída Libre','Economía','Jospeh Stiglitz',2008,'Santillana Ediciones Generales','Libro de tapa dura',true),
+new MainBook(2,'Desarrollo de videojuegos','Informática','Nelson Mauricio García, Yohiner Moreno',2019,'Ra-ma Editorial','Informatica, videojuegos',false),
+new MainBook(3,'Diez Razones para ser científico','Divulgación Científica','Ruy Perez Tamayo',2013,'Fondo de Cultura Economica','Biografía, Ensayo de Ciencia',true),
+new MainBook(4,'Analisis Financiero Aplicado','Finanzas y Contabilidad','Hector Ortiz Anaya',2015,'Universidad Externado de Colombia','1.Administración Financiera,Analísis Financiero,NIIF',false),
+new MainBook(5,'Esto lo cambia todo','Medio Ambiente','Naomi Klein',2015,'Espasa Libros S.L.U','1. Cuidado del medio Ambiente',true),
+new MainBook(6,'Nueva Historia Económica de Colombia','Economía Política','Salomón Kalmanovitz',2010,'Santillana Ediciiones Generales S.L.','Economía Política, Historia Economica',false),
+new MainBook(7,'La Inteligencia Emocional','Psicología','Daniel Koleman',2018,'Penguin Ranadom House Ediciones','Psicología, Salud Mental',false),
+new MainBook(8,'Neuro Emotion','Ventas','Andrés Cardenas Guameri',2016,'Smart Print Artes Gráficas','Negociación y ventas',true),
+new MainBook(9,'El Silmarilion','Novela de Fantasía','J.R.R. Tolkien',2012,'Editorial Planeta','Novela de Fantasía',false),
+new MainBook(10,'Sanación Energetica','Sanación Interior','Stefanie Menzel',2012,'Panamericana Editorial','Energía Cosmica - Uso terapeutico',false),
+new MainBook(11,'Retornamos como sombras','Novela Policial','Paco Ignacio Taibo',2002,'Editorial Planeta','Novela Policial - Realismo Mágico',false),
+new MainBook(12,'Dios Creó los Números','Ciencias Naturales','Stephen Hawking',2006,'Editorial Planeta Colombia S.A.','Física - Matemáticas - Historia de las Matemáticas',true),
+new MainBook(13,'Gobernabilidad Monetaria y Financiera Internacional','Finanzas y Derecho','Adriana Zapata de Arbelaez',2012,'Universidad Externado de Colombia','Derecho Financiero - Sistema Monetario Internacional',true),
+new MainBook(14,'Diseño de Interfaces en aplicaciones Móviles','Programación,videojuegos','Sebastían Serna, Cesar Pardo',2017,'Ediciones de la U','1. Informática, 2. Sistemas Operativos Móvles',false),
+new MainBook(15,'Electrónica Básica: Guía Práctica','Electronica','David Arboleda Brihuega',2011,'Ediciones de la U','1. Teoría de Circuito 2.Interruptores y Resistencias',true)
+]
+
+for(let i=0; i<bookListData.length;i++){
+    bookListData[i].createNodes;
+}
