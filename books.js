@@ -62,49 +62,42 @@ class MainBook{
         //funciones de clase de main book
         this.cathalogMainBook.classList = 'cathalog-main-book'; 
         this.catalogMain.appendChild(this.cathalogMainBook);
-
         return this.catalogMain;
     }
      //crear el nodo del Maingrid
      createMainGrid(){
         this.cathalogMainGrid.classList = 'cathalog-main-grid';
         this.cathalogMainBook.appendChild(this.cathalogMainGrid);
-        return this.cathalogMainBook;
     }
     //creat el nodo de id
     createMainId(){
         this.mainId.classList = 'cathalog-main-id';
         this.mainId.append(this.id,document.createElement('h1'));
         this.cathalogMainGrid.appendChild(this.mainId);
-        return this.mainId;
     }
     //crear el nodo de book title
     createBookTitle(){
         this.cathalogBookTitle.classList = 'cathalog-book-title';
         this.cathalogBookTitle.innerHTML = this.nameBook;
         this.cathalogMainGrid.appendChild(this.cathalogBookTitle);
-        return this.cathalogMainGrid;
     }
     //creat el nodo del genero
     createGenre(){
         this.genreNode.classList = 'genre';
         this.genreNode.innerHTML = 'Género: ';
         this.cathalogMainGrid.appendChild(this.genreNode);
-        return this.genreNode;
     }
     //crear el nodo de la descripción del genero
     createGenreDescription(){
         this.genreDescription.classList = 'genre-description';
         this.genreDescription.innerHTML = this.genre;
         this.cathalogMainGrid.appendChild(this.genreDescription);
-        return this.cathalogMainGrid;
     }
     //crear el nodo del Autor
     createAuthor(){
         this.authorNode.classList = 'author';
         this.authorNode.innerHTML = 'Autor: ';
         this.cathalogMainGrid.appendChild(this.authorNode);
-        return this.cathalogMainGrid; 
     }
     //crear el nodo de la descripción del Autor;
     createAuthorDescription(){
@@ -163,12 +156,15 @@ class MainBook{
 
         this.cathalogMainGrid.appendChild(this.cathalogState);
     }
+    //destruir el nodo por no coincidir con la busqueda
+    get destroyMainNode(){
+        this.cathalogMainBook.style.display = 'none';
+    }
 }
   
-
 // array con todos los obejtos de las clases de los libros
 const bookListData = [
-new MainBook(1,'Caída Libre','Economía','Jospeh Stiglitz',2008,'Santillana Ediciones Generales','Libro de tapa dura',true),
+new MainBook(1,'Caída Libre','Economía','Joseph Stiglitz',2008,'Santillana Ediciones Generales','Libro de tapa dura',true),
 new MainBook(2,'Desarrollo de videojuegos','Informática','Nelson Mauricio García, Yohiner Moreno',2019,'Ra-ma Editorial','Informatica, videojuegos',false),
 new MainBook(3,'Diez Razones para ser científico','Divulgación Científica','Ruy Perez Tamayo',2013,'Fondo de Cultura Economica','Biografía, Ensayo de Ciencia',true),
 new MainBook(4,'Analisis Financiero Aplicado','Finanzas y Contabilidad','Hector Ortiz Anaya',2015,'Universidad Externado de Colombia','1.Administración Financiera,Analísis Financiero,NIIF',false),
@@ -187,4 +183,31 @@ new MainBook(15,'Electrónica Básica: Guía Práctica','Electronica','David Arb
 
 for(let i=0; i<bookListData.length;i++){
     bookListData[i].createNodes;
+}
+
+//buscador de libros con javascript
+
+const searchBook = () =>{
+    let cathalogSearcher = document.getElementById('cathalog-main-searcher');
+    let changeCase = cathalogSearcher.value.toUpperCase();
+    let textValue;
+    for(let i=0;i<bookListData.length;i++){
+     let cathalogMainBook = bookListData[i].cathalogMainBook;   
+        if(cathalogMainBook){
+        textValue = cathalogMainBook.textContent || cathalogMainBook.innerText; 
+            if(textValue.toUpperCase().indexOf(changeCase) > -1){
+            cathalogMainBook.style.display = "block";
+            }
+            else{
+            cathalogMainBook.style.display = "none"
+            }
+       } 
+    }
+}
+
+//buqueda automática para celulares
+const searchBookCellphone = () =>{
+    if(document.body.clientWidth <=768){
+        searchBook()
+    }
 }

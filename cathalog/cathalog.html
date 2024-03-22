@@ -52,30 +52,10 @@
     <main class="cathalog-main">
         <h1 class="cathalog-main-title">CATÁLOGO DE LIBROS</h1>
         <label class="cathalog-main-label">
-            <input type="search" class="cathalog-main-searcher"/>
-            <button type="submit" class="cathalog-main-submit"><img src="../icons/loop-icon.svg" /></button>
+            <input type="text" class="cathalog-main-searcher" id="cathalog-main-searcher" onkeyup="searchBookCellphone()"/>
+            <button type="submit" class="cathalog-main-submit"><img src="../icons/loop-icon.svg" onclick="searchBook()"/></button>
         </label>
-<!--         <section class="cathalog-main-book">
-            <section class="cathalog-main-grid">
-                <article class="cathalog-main-id">
-                    <h1>1</h1> 
-                </article>
-                <h1 class="cathalog-book-title">CAÍDA LIBRE</h1>
-                <p class="cathalog-main-blue genre">Género: </p>
-                <p class="cathalog-main-p genre-description">Economía</p>
-                <p class="cathalog-main-blue author">Autor: </p>
-                <p class="cathalog-main-p author-description">Joseph Stiglitz</p>
-                <p class="cathalog-main-blue year">Año:</p>
-                <p class="cathalog-main-p year-description">2008</p>
-                <p class="cathalog-main-blue editorial">Editorial: </p>
-                <p class="cathalog-main-p editorial-description">Santillana Ediciones Generales</p>
-                <p class="cathalog-main-blue book-type">Tipo de libro: </p>
-                <p class="cathalog-main-p book-type-description">Libro de tapa dura</p>
-                <article class="cathalog-state">
-                    <p class="cathalog-available">Disponible</p>
-                    <p class="cathalog-loaned">En préstamo</p>
-                </article>
-            </section> -->
+        <p id="prooftext" onchange="onkeyup(event)"></p>
             <!-- Aqui se insertan las etiquetas que vienen del nodo -->
         </section>
     </main>

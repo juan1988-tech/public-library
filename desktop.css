@@ -49,24 +49,20 @@ html{
 .main-portrait::-webkit-scrollbar,
 .workshops .workshop-slidebar::-webkit-scrollbar,
 .workshops .english-slidebar::-webkit-scrollbar{
-    height: 1rem;
-    background-color: transparent;
-    opacity: 30%;
-    border-radius: .5rem; 
+display: none; 
 }
 
 .main-portrait::-webkit-scrollbar-thumb,
 .workshops .workshop-slidebar::-webkit-scrollbar-thumb,
 .workshops .english-slidebar::-webkit-scrollbar-thumb{
-    background-color: var(--medium-gray-color);
-    border-radius: .5rem;
+    display: none;
   }
 
 .main-portrait::-webkit-scrollbar-track,
 .workshops .workshop-slidebar::-webkit-scrollbar-track,
 .workshops .english-slidebar::-webkit-scrollbar-track{
-    background-color: var(--medium-soft-gray-color);
-}
+  display: none;
+} 
 
 .introducing-part .introducing-part-paragraph{
     font-size: 2.4rem;
@@ -136,10 +132,6 @@ html{
     width: 80.2rem;
     height: 54.6rem;
     left: calc( 50% - 40.1rem );
-}
-
-.form-container{
-    margin-top: 1.8rem;
 }
 
 .form-container {
