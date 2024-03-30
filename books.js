@@ -30,15 +30,6 @@ class MainBook{
         this.cathalogState = document.createElement('article');
         this.bookAvailable = document.createElement('p');
         this.bookLoaned = document.createElement('p');
-
-        if(this.state === true){
-            this.stateBook = 'Disponible';
-            return  this.stateBook;
-        }
-        else{
-            this.stateBook = "En préstamo";
-            return this.stateBook;
-         }
     }
    
     // crear el nodo de la información del libro
@@ -154,7 +145,19 @@ class MainBook{
         this.bookLoaned.innerHTML = 'En préstamo';
         this.cathalogState.appendChild(this.bookLoaned);
 
+      if(this.state === true){
+            this.bookAvailable.style.color = 'var(--orange-digital-journal)';
+            this.bookLoaned.style.color = 'var(--medium-gray-color)';
+        }
+    else{
+            this.bookAvailable.style.color = 'var(--medium-gray-color)';
+            this.bookLoaned.style.color = 'var(--blue-literature-club)'
+        } 
+
+        
+
         this.cathalogMainGrid.appendChild(this.cathalogState);
+        
     }
     //destruir el nodo por no coincidir con la busqueda
     get destroyMainNode(){
@@ -211,3 +214,5 @@ const searchBookCellphone = () =>{
         searchBook()
     }
 }
+
+
