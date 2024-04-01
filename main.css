@@ -801,3 +801,58 @@ position: relative;
 .cathalog-state .cathalog-loaned{
     color: var(--orange-digital-journal);
 }
+
+/*estilos no encontramos el libro que buscar*/
+
+.missing-book{
+    display: grid;
+    grid-template: 5.6rem repeat(3,4.6rem) auto /4rem auto;
+    grid-template-areas: "missing-book-icon missing-book-title"
+                         "first-advert first-advert"
+                         "second-advert second-advert"
+                         "third-advert third-advert"
+                         "la-montana-mag-logo la-montana-mag-logo";
+    align-items: center;
+    justify-items: center;
+    height: 28rem;
+}
+
+.missing-book .missing-book-icon{
+    grid-area: missing-book-icon;
+    justify-self: center;
+}
+
+.missing-book .missing-book-title{
+    grid-area: missing-book-title;
+    color: var(--dark-blue-tag);
+    font-size: 2rem;
+}
+
+.missing-book .first-advert{
+    grid-area: first-advert;
+    justify-self: left;
+    color: var(--dark-blue-tag);
+    font-size: 1.6rem;
+    margin-left: 1rem;
+}
+
+.missing-book .second-advert{
+    grid-area: second-advert;
+    justify-self: left;
+    color: var(--dark-blue-tag);
+    font-size: 1.6rem;
+    margin-left: 1rem;
+}
+
+.missing-book .third-advert{
+    grid-area: third-advert;
+    justify-self: left;
+    color: var(--dark-blue-tag);
+    font-size: 1.6rem;
+    margin-left: 1rem;
+}
+
+.missing-book .la-montana-mag-logo{
+    grid-area: la-montana-mag-logo;
+    width: 16rem;
+}

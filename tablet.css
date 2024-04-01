@@ -90,4 +90,13 @@
 .cathalog-main .cathalog-main-grid{
     align-items: center;
 }
+
+
+/*estilos no encontramos el libro que buscar*/
+
+.missing-book{
+    width: 36.9rem;
+    margin: 0 auto;
+    margin-top: 1.6rem;
+}
  

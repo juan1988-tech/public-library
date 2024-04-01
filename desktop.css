@@ -228,3 +228,28 @@ display: none;
 .cathalog-main .cathalog-state{
     width: 24rem;
 }
+
+/*estilos no encontramos el libro que buscar*/
+
+.missing-book{
+    width: 68.3rem;
+    height: 30rem;
+}
+
+.missing-book .missing-book-icon{
+    width: 3rem;
+}
+
+.missing-book .missing-book-title{
+    font-size: 3.2rem;
+}
+
+.missing-book .first-advert,
+.missing-book .second-advert,
+.missing-book .third-advert{
+    font-size: 2rem;
+}
+
+.missing-book .la-montana-mag-logo{
+    width: 20rem;
+}

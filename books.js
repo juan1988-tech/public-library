@@ -152,9 +152,7 @@ class MainBook{
     else{
             this.bookAvailable.style.color = 'var(--medium-gray-color)';
             this.bookLoaned.style.color = 'var(--blue-literature-club)'
-        } 
-
-        
+        }
 
         this.cathalogMainGrid.appendChild(this.cathalogState);
         
@@ -190,29 +188,63 @@ for(let i=0; i<bookListData.length;i++){
 
 //buscador de libros con javascript
 
+/* let missingBook = document.querySelector('#missing-book');
+missingBook.style.display = "none" */
+
+/*ceracion del nodo de no libro */
+// console.log(bookListData[0].cathalogMainBook)
+
 const searchBook = () =>{
     let cathalogSearcher = document.getElementById('cathalog-main-searcher');
     let changeCase = cathalogSearcher.value.toUpperCase();
+    const catalogMainBook = document.querySelector('.cathalog-main-book');
+    
+   // console.log(catalogMainBook.style.display)
+
     let textValue;
+    
     for(let i=0;i<bookListData.length;i++){
-     let cathalogMainBook = bookListData[i].cathalogMainBook;   
-        if(cathalogMainBook){
-        textValue = cathalogMainBook.textContent || cathalogMainBook.innerText; 
-            if(textValue.toUpperCase().indexOf(changeCase) > -1){
+     let cathalogMainGrid = bookListData[i].cathalogMainGrid;
+     let cathalogMainBook = bookListData[i].cathalogMainBook;
+     let cathalogAuthor = bookListData[i].author;
+
+      textValue = cathalogAuthor.textContent || cathalogMainGrid.innerText;
+        if(textValue.toUpperCase().indexOf(changeCase) > -1){
             cathalogMainBook.style.display = "block";
             }
-            else{
-            cathalogMainBook.style.display = "none"
+        else{
+            cathalogMainBook.style.display = "none";  
             }
        } 
-    }
 }
+
+
+
+
+
 
 //buqueda automática para celulares
 const searchBookCellphone = () =>{
     if(document.body.clientWidth <=768){
-        searchBook()
+        let cathalogSearcher = document.getElementById('cathalog-main-searcher');
+        let changeCase = cathalogSearcher.value.toUpperCase();
+        let textValue;
+        
+        for(let i=0;i<bookListData.length;i++){
+         let cathalogMainGrid = bookListData[i].cathalogMainGrid;
+         let cathalogMainBook = bookListData[i].cathalogMainBook;
+         let cathalogAuthor = bookListData[i].author;
+    
+          textValue = cathalogAuthor.textContent || cathalogMainGrid.innerText;
+            if(textValue.toUpperCase().indexOf(changeCase) > -1){
+                cathalogMainBook.style.display = "block";
+                }
+            else{
+                cathalogMainBook.style.display = "none";
+                }
+           }
+        }   
     }
-}
+
 
 
