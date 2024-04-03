@@ -28,6 +28,7 @@ html{
     font-size: .625rem;
     background: var(--light-gray-bg-color);
     font-family: "Questrial", sans-serif;
+    scroll-behavior: smooth;
 }
 
 h1,
@@ -815,6 +816,10 @@ position: relative;
     align-items: center;
     justify-items: center;
     height: 28rem;
+}
+
+.non-missing-book{
+    display: none;
 }
 
 .missing-book .missing-book-icon{

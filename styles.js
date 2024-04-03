@@ -18,6 +18,14 @@ function modifySecondLine(secondButtonLine,thirdButtonLine,navbarMenu){
     navbarMenu.classList.toggle('navbar-menu-movement');
 }
 
+
+//funciones par el el botón registrate
+const register = document.querySelector('#register')
+
+function moveToRegister(){
+    modifySecondLine(secondButtonLineIndex,thirdButtonLineIndex,navbarMenuIndex);
+}
+
 // funciones para el carrusel de la etiqueta main-portrait, y sección talleres e inglés
 
 //main-portrait
@@ -29,7 +37,6 @@ const thirdButtonMain = document.querySelector('#third-button-main');
 const fourthButtonMain = document.querySelector('#fourth-button-main');
 
 const firstPictureWidthMain = document.querySelector('#first-picture-main').clientWidth;
-console.log(firstPictureWidthMain);
 const secondPictureWidthMain = document.querySelector('#second-picture-main').clientWidth;
 const thirdPictureWidthMain = document.querySelector('#third-picture-main').clientWidth;
 const fourthPictureWidthMain = document.querySelector('#fourth-picture-main').clientWidth; 

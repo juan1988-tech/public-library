@@ -13,7 +13,7 @@
     <title>Biblioteca Comunitaria la Montaña Mágica</title>
 </head>
 <body>
-    <header class="header" href="#">
+    <header class="header">
         <a class="icon-container" href="#">
             <img class="icon-image" src="./images/log-la-montana-magica-h-w.png"/>
         </a>
@@ -32,7 +32,7 @@
                  <a>INGRESA</a>
              </li>
              <li>
-                 <a>REGÍSTRATE</a>
+                 <a href="#form-container" id='register' onclick="moveToRegister()">REGÍSTRATE</a>
              </li>
             </ul> 
          </nav>
@@ -44,7 +44,7 @@
                 <a>INGRESA</a>
             </li>
             <li>
-                <a>REGÍSTRATE</a>
+                <a href="#form-container">REGÍSTRATE</a>
             </li>
            </ul> 
     </header>
@@ -181,7 +181,7 @@
         </section>
     </section>
     </main>
-    <section class="form-container">
+    <section class="form-container" id="form-container">
         <h1>INSCRÍBETE EN NUESTRAS ACTIVIDADES</h1>
         <p>Tenemos inscripciones abiertas para nuestras actividades, inscríbete para disfrutar de nuestras actividades y conocer nuestra biblioteca</p>
         <form class="form" action="">

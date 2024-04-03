@@ -1,5 +1,5 @@
 class MainBook{
-    constructor(id,nameBook,genre,author,year,editorial,typeBook,state,stateBook,available,loaned){
+    constructor(id,nameBook,genre,author,year,editorial,typeBook,state,stateBook,available,loaned,catalogMain){
         this.id = id;
         this.nameBook = nameBook;
         this.genre = genre;
@@ -11,6 +11,7 @@ class MainBook{
         this.stateBook = stateBook;
         this.available = available;
         this.loaned = loaned;
+        this.catalogMain = catalogMain;
         //nodos
         this.catalogMain = document.querySelector('.cathalog-main');
         this.cathalogMainBook = document.createElement('section');
@@ -151,15 +152,11 @@ class MainBook{
         }
     else{
             this.bookAvailable.style.color = 'var(--medium-gray-color)';
-            this.bookLoaned.style.color = 'var(--blue-literature-club)'
+            this.bookLoaned.style.color = 'var(--blue-literature-club)';
         }
 
         this.cathalogMainGrid.appendChild(this.cathalogState);
         
-    }
-    //destruir el nodo por no coincidir con la busqueda
-    get destroyMainNode(){
-        this.cathalogMainBook.style.display = 'none';
     }
 }
   
@@ -182,25 +179,84 @@ new MainBook(14,'Diseño de Interfaces en aplicaciones Móviles','Programación,
 new MainBook(15,'Electrónica Básica: Guía Práctica','Electronica','David Arboleda Brihuega',2011,'Ediciones de la U','1. Teoría de Circuito 2.Interruptores y Resistencias',true)
 ]
 
+class MissingBook extends MainBook {
+    constructor(missingBook,missingBookIcon,missingBookTitle,missingBookFirstAdvertisment,
+    missingBookSecondAdvertisment,missingBookThirdAdvertisment,laMontanaMagicaImg,catalogMain){
+    super(catalogMain) 
+    //nodos
+    this.missingBook = missingBook;
+    this.missingBookIcon = missingBookIcon;
+    this.missingBookTitle = missingBookTitle; 
+    this.missingBookFirstAdvertisment = missingBookFirstAdvertisment;
+    this.missingBookSecondAdvertisment = missingBookSecondAdvertisment;
+    this.missingBookThirdAdvertisment = missingBookThirdAdvertisment;
+    this.laMontanaMagicaImg = laMontanaMagicaImg;
+    }
+    getNodes(){
+    //nodo padre, missing book    
+        this.missingBook = document.createElement('section');
+        this.missingBook.classList = 'missing-book';
+        this.missingBook.id = 'missing-book';
+    //img mising book icon    
+        this.missingBookIcon = document.createElement('img');
+        this.missingBookIcon.classList = 'missing-book-icon';
+        this.missingBookIcon.src = '../icons/wrong-book-icon.svg';
+    //titulo missing-book-title
+        this.missingBookTitle = document.createElement('h1');
+        this.missingBookTitle.classList = 'missing-book-title';
+        this.missingBookTitle.innerHTML = "VAYA! AL PARECER NO ENCONTRAMOS EL LIBRO QUE BUSCAS";
+    //missing-book-advertismment firts advert 
+        this.missingBookFirstAdvertisment = document.createElement('p');
+        this.missingBookFirstAdvertisment.classList = 'missing-book-advertisment first-advert';
+        this.missingBookFirstAdvertisment.innerHTML = 'Revisa el nombre del autor';
+    //missing-book-advertismment saecond-advert
+        this.missingBookSecondAdvertisment = document.createElement('p');
+        this.missingBookSecondAdvertisment.classList = 'missing-book-advertisment second-advert';
+        this.missingBookSecondAdvertisment.innerHTML = 'Revisa el nombre del libro';    
+    //missing-book-advertismment third-advert
+        this.missingBookThirdAdvertisment = document.createElement('p');
+        this.missingBookThirdAdvertisment.classList = 'missing-book-advertisment third-advert';
+        this.missingBookThirdAdvertisment.innerHTML = 'Consulta con el voluntario encargado';
+    //la montana-magica-img
+        this.laMontanaMagicaImg = document.createElement('img');
+        this.laMontanaMagicaImg.classList = 'la-montana-mag-logo';
+        this.laMontanaMagicaImg.src = '../images/log-la-montana-magica-h.png';        
+    //añade los nodos a la etiqueta missing-book    
+        this.missingBook.append(this.missingBookIcon,this.missingBookTitle,this.missingBookFirstAdvertisment,
+        this.missingBookSecondAdvertisment,this.missingBookThirdAdvertisment,this.laMontanaMagicaImg);
+    //añade la etiqueta missing book a la etiqueta principal  
+        this.catalogMain.appendChild(this.missingBook);  
+        console.log(this.missingBook)    
+        console.log(typeof this.missingBook)
+        console.log(this.missingBook.className)
+        
+        return this.catalogMain;
+    }
+    quitNodes(){
+        this.missingBook.classList.remove('missing-book');
+        this.missingBook.classList.add('non-missing-book');
+
+        return this.missingBook;
+    }
+    
+}
+
+const missingBook = new MissingBook;
+//missingBook.getNodes();
+//missingBook.quitNodes();
+
 for(let i=0; i<bookListData.length;i++){
     bookListData[i].createNodes;
 }
 
-//buscador de libros con javascript
+let searchbookCounter = 0;
 
-/* let missingBook = document.querySelector('#missing-book');
-missingBook.style.display = "none" */
-
-/*ceracion del nodo de no libro */
-// console.log(bookListData[0].cathalogMainBook)
-
-const searchBook = () =>{
+const searchBook = (event) =>{
     let cathalogSearcher = document.getElementById('cathalog-main-searcher');
     let changeCase = cathalogSearcher.value.toUpperCase();
     const catalogMainBook = document.querySelector('.cathalog-main-book');
-    
-   // console.log(catalogMainBook.style.display)
-
+    const catalogMainGrid= document.querySelector('cathalog-main-grid')
+    let missingBookItem = document.querySelector('.missing-book');
     let textValue;
     
     for(let i=0;i<bookListData.length;i++){
@@ -213,15 +269,10 @@ const searchBook = () =>{
             cathalogMainBook.style.display = "block";
             }
         else{
-            cathalogMainBook.style.display = "none";  
+            cathalogMainBook.style.display = "none";
             }
-       } 
+       }
 }
-
-
-
-
-
 
 //buqueda automática para celulares
 const searchBookCellphone = () =>{
