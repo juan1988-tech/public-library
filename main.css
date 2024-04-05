@@ -516,46 +516,84 @@ position: relative;
     border-radius: .3rem;
 }
 
-/*estilos del footer*/
-.footer{
+/*estilos del footer y footer login*/
+.footer, .footer-login{
     padding: 1.6rem 3.2rem;
     background-color: var(--blue-burguer-button);
     color: var(--light-gray-color);
     font-size: 1.6rem;
 }
 
-.footer a{
-    display: block;
+.footer-login{
+    background-color: var(--light-gray-color);
+    margin-top: 2rem;
 }
 
-.footer .footer-adress{
+
+.footer a, .footer-login a{
+    display: block;
+    color: var(--light-gray-color);
+    text-decoration: none;
+}
+
+.footer-login a:first-child{
+    color: var(--dark-blue-tag);
+}
+
+.footer-login a{
+    color: var(--dark-gray-color);
+}
+
+.footer .footer-adress, .footer-login .footer-adress{
     font-size: 1.6rem;
 }
 
-.footer .footer-libary-location{
+.footer-login .footer-adress{
+    color: var(--dark-blue-tag);
+}
+
+
+.footer .footer-libary-location, .footer-login .footer-libary-location{
     color: var(--medium-gray-color);
     font-size: 1.4rem;
     margin-top: .6rem;
 }
 
-.footer .footer-links{
+.footer-login .footer-libary-location{
+    color: var(--dark-gray-color);
+}
+
+.footer .footer-links, .footer-login .footer-links {
     display: flex;
     flex-direction: column;
     height: 16.3rem;
     justify-content: space-around;
 } 
 
+.footer-login .footer-links:first-child{
+    color: var(--dark-blue-tag);
+}
+
+.footer-login .footer-links{
+    color: var(--dark-gray-color);
+}
+
 .footer-credits{
     display: flex;
     flex-direction: column;
 }
 
-.footer-credits .footer-credits-library-image{
+.footer-credits .footer-credits-library-image,.footer-credits .footer-credits-library-image-black{
     display: block;
     width: 12rem;
     height: 6rem;
     margin: 0 auto;
     margin-top: 1.6rem;
+}
+
+.footer-credits .footer-credits-library-image-black{
+    width: 12rem;
+    height: 4.3rem;
 }
 
 .footer-credits .link-developer{
@@ -567,18 +605,27 @@ position: relative;
     margin-top: 1rem;
 }
 
-.link-developer p{
+.link-developer p, .link-developer-login p{
     color: var(--medium-gray-color);
     text-align: center;
     font-size: 1.6rem;
 }
 
-.link-developer p+a{
+.link-developer-login p{
     color: var(--dark-gray-color);
+}
+
+.link-developer p + a, .link-developer-login p + a {
+    color: var(--medium-gray-color);
     text-align: center;
     font-size: 1.4rem;
     margin-top: .6rem;
     text-decoration: none;
+}
+
+
+.link-developer-login p + a{
+    color: var(--dark-gray-color);
 }
 
 .form{
@@ -597,11 +644,6 @@ position: relative;
         height: 13.6rem;
     }
 
-
-    /* .english-slidebar-container .navigation-button{
-        margin-top: 29.9rem;
-    } */
-
     .main-portrait figure,
     .workshop-slidebar figure,
     .english-slidebar figure
@@ -609,32 +651,17 @@ position: relative;
         min-width: 100%;
     }
 
-/* 
-    .introducing-part,
-    .cathalog,
-    .workshops-information,
-    .english-information,
-    .form-container{
-        padding: 0 7.2rem;
-    } */
- 
     .form{
         padding-right: 0;
         padding-left: 0;
         margin: 0 auto;
     } 
-    .footer{
+    .footer, .footer-login {
         padding-top: 1.6rem;
         padding-bottom: 1.6rem;
         padding-right: 3.2rem;
         padding-left: 3.2rem;
     }
-    /* .footer .footer-adress,
-    .footer .footer-libary-location,
-    .footer .footer-links{
-        width: 70%;
-        margin: 0 auto;
-    }     */
 }   
 
 /*estilos libro*/
@@ -861,3 +888,90 @@ position: relative;
     grid-area: la-montana-mag-logo;
     width: 16rem;
 }
+
+/*estilos para el login*/
+
+.login{
+    padding-right: 3.2rem;
+    padding-left: 3.2rem;
+}
+
+.login .login-title{
+    color: var(--dark-purple);
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.form-login label{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-login label span{
+    width: 100%;
+    color: var(--dark-blue-tag);
+    font-size: 1.6rem;
+}
+
+.form-login input[type="email"], 
+.form-login input[type="password"]{
+    width: 100%;
+    margin-top: .6rem;
+    background-color: var(--light-gray-color);
+    border: 0;
+    height: 2rem;
+    border-radius: .3rem;
+    margin-top: 1rem;
+ }
+
+ .form-login-password span{
+    margin-top: 1rem;
+ }
+
+ .form-login .login-login,
+ .form-login .login-register{
+    display: block;
+    background-color: var(--dark-blue-tag);
+    color: var(--light-gray-bg-color);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    width: 73%;
+    height: 3.2rem;
+    border-radius: .3rem;
+    margin: 0 auto;
+    margin-top: 1.6rem;
+    font-size: 1.4rem;
+    text-decoration: none;
+    border: none;
+ }
+
+ .form-login .login-register{
+    background-color: var(--dark-purple);
+    margin-top: 1rem;
+ }
+
+ .form-login .login-or{
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+ }
+
+ .login-or{
+    margin-top: 1rem;
+ }
+
+ .login-or p{
+    margin: 0 1rem;
+ }
+
+ .login-or hr{
+    width: 100%;
+    background-color: var(--medium-gray-color);
+    height: .1rem;
+ }
+
+
+

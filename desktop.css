@@ -99,7 +99,6 @@ display: none;
     left: calc( 50% - 40.1rem );
 }
 
-
 .workshop-slidebar figure:first-child{
     min-width: 98rem;
 }
@@ -154,15 +153,20 @@ display: none;
 }
 
 .footer .footer-adress,
+.footer-login .footer-adress,
 .footer .footer-links,
-.link-developer p{
+.footer-login .footer-links,
+.link-developer p,
+.link-developer-login p{
     font-size: 2rem;
     width: 21.4rem;
     margin: 0 auto;
 }
 
 .footer .footer-libary-location,
-.footer-credits .link-developer{
+.footer-login .footer-libary-location,
+.footer-credits .link-developer,
+.footer-login .link-developer{
     width: 21.4rem;
     margin: 0 auto;
 }
@@ -253,3 +257,31 @@ display: none;
 .missing-book .la-montana-mag-logo{
     width: 20rem;
 }
+
+/* estilos para el login*/
+
+.login{
+    height: 50.3rem;
+    position: relative;
+}
+
+.login .form-login{
+    position: absolute;
+    width: 36.5rem;
+    top: calc( 50% - 15rem);
+    height: 30rem;   
+}
+
+.login .login-title{
+    font-size: 3.2rem;
+}
+
+.form-login label span{
+    font-size: 2rem;
+}
+
+.form-login input[type="email"], .form-login input[type="password"] {
+  margin-top: 1rem;
+  height: 2.4rem;
+}
+
