@@ -467,7 +467,7 @@ position: relative;
     background-color: #302873;
     color: var(--light-gray-bg-color);
     border: 0;
-    height: 2rem;
+    height: 3.2rem;
     border-radius:.3rem;
 }
 
@@ -475,7 +475,7 @@ position: relative;
     background-color: #302873;
     color: var(--light-gray-bg-color);
     border: 0;
-    height: 2rem;
+    height: 3.2rem;
     border-radius:.3rem;
     margin-top: .6rem;
     width: 50%;
@@ -920,7 +920,7 @@ position: relative;
     margin-top: .6rem;
     background-color: var(--light-gray-color);
     border: 0;
-    height: 2rem;
+    height: 3.2rem;
     border-radius: .3rem;
     margin-top: 1rem;
  }
