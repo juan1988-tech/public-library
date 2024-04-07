@@ -149,7 +149,7 @@ display: none;
 
 .form input[type="text"],.form input[type="date"]{
     margin-top: 1rem;
-    height: 2.4rem;
+    height: 3.2rem;
 }
 
 .footer .footer-adress,
@@ -282,6 +282,6 @@ display: none;
 
 .form-login input[type="email"], .form-login input[type="password"] {
   margin-top: 1rem;
-  height: 2.4rem;
+  height: 3.2rem;
 }
 
